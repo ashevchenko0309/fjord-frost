@@ -9,7 +9,6 @@ import { SecondaryBannerItem } from './components/SecondaryBannerItem';
 import { MainBannerItem } from './components/MainBannerItem';
 import { LeftBannerArrow, RightBannerArrow } from '../../../components/icons/navigation';
 import { useSwiper } from 'swiper/swiper-react';
-import clsx from "clsx";
 
 const Banner = () => {
   const [controlledSwiper, setControlledSwiper] = useState<ReturnType<typeof useSwiper> | null>(
@@ -22,57 +21,56 @@ const Banner = () => {
 
   return (
     <section>
-      <div className="mb-8 bg-white pt-11 md:grid md:grid-cols-[40%_60%] xl:grid-cols-[30%_70%] md:pt-0 relative">
-        <div className="xl:pl-24 xl:flex xl:items-center relative">
-          <ul className="hidden xl:flex xl:flex-col h-1 items-center gap-8 xl:absolute xl:top-[38%]">
+      <div className="relative mb-8 bg-white pt-11 md:grid md:grid-cols-[40%_60%] md:pt-0 xl:grid-cols-[30%_70%]">
+        <div className="relative xl:flex xl:items-center xl:pl-24">
+          <ul className="hidden h-1 items-center gap-8 xl:absolute xl:top-[38%] xl:flex xl:flex-col">
             <li className="relative">
-            <span
-                className={clsx(
-                    'absolute',
-                    activeSlide === 0 ? '-mt-px h-1 bg-primary-main w-5' : 'h-0.5 bg-primary-border w-2.5'
-                )}
-            />
+              <p
+                className={`${
+                  activeSlide === 0
+                    ? '-mt-px h-1 w-5 bg-primary-main'
+                    : 'h-0.5 w-2.5 bg-primary-border'
+                }`}
+              />
             </li>
             <li className="relative">
-            <span
-                className={clsx(
-                    'absolute',
-                    activeSlide > 0 && activeSlide < MAIN_SLIDES.length - 1
-                        ? '-mt-px h-1 bg-primary-main w-5'
-                        : 'h-0.5 bg-primary-border w-2.5'
-                )}
-            />
+              <p
+                className={`${
+                  activeSlide > 0 && activeSlide < MAIN_SLIDES.length - 1
+                    ? '-mt-px h-1 w-5 bg-primary-main'
+                    : 'h-0.5 w-2.5 bg-primary-border'
+                }`}
+              />
             </li>
             <li className="relative">
-            <span
-                className={clsx(
-                    'absolute',
-                    activeSlide === MAIN_SLIDES.length - 1
-                        ? '-mt-px h-1 bg-primary-main w-5'
-                        : 'h-0.5 bg-primary-border w-2.5'
-                )}
-            />
+              <p
+                className={`${
+                  activeSlide === MAIN_SLIDES.length - 1
+                    ? '-mt-px h-1 w-5 bg-primary-main'
+                    : 'h-0.5 w-2.5 bg-primary-border'
+                }`}
+              />
             </li>
           </ul>
-          <div className="xl:absolute xl:z-20 w-full xl:right-[-186px]">
+          <div className="w-full xl:absolute xl:right-[-186px] xl:z-20">
             <Swiper
-                loop={true}
-                effect="fade"
-                modules={[EffectFade, Controller]}
-                onSwiper={(swiper) => setControlledSwiper(swiper)}
-                onSlideChange={onMainSlideChange}
-                className="titles-slider"
+              loop={true}
+              effect="fade"
+              modules={[EffectFade, Controller]}
+              onSwiper={(swiper) => setControlledSwiper(swiper)}
+              onSlideChange={onMainSlideChange}
+              className="titles-slider"
             >
               {MAIN_SLIDES.map(({ entry, title, button, description }, index) => (
-                  <SwiperSlide key={entry}>
-                    <MainBannerItem
-                        entry={entry}
-                        title={title}
-                        button={button}
-                        description={description}
-                        index={index}
-                    />
-                  </SwiperSlide>
+                <SwiperSlide key={entry}>
+                  <MainBannerItem
+                    entry={entry}
+                    title={title}
+                    button={button}
+                    description={description}
+                    index={index}
+                  />
+                </SwiperSlide>
               ))}
             </Swiper>
           </div>
@@ -128,22 +126,22 @@ const Banner = () => {
           <div className="mt-4 flex justify-center gap-2 xl:hidden">
             <LeftBannerArrow
               onClick={() => controlledSwiper?.slidePrev()}
-              className="h-8 w-8 cursor-pointer fill-neutral-10 xl:w-10 xl:h-10"
+              className="h-8 w-8 cursor-pointer fill-neutral-10 xl:h-10 xl:w-10"
             />
             <RightBannerArrow
               onClick={() => controlledSwiper?.slideNext()}
-              className="h-8 w-8 cursor-pointer fill-neutral-10 xl:w-10 xl:h-10"
+              className="h-8 w-8 cursor-pointer fill-neutral-10 xl:h-10 xl:w-10"
             />
           </div>
         </div>
-        <div className="hidden xl:absolute xl:bottom-[120px] xl:left-[35%] xl:flex xl:z-20 xl:gap-3">
+        <div className="hidden xl:absolute xl:bottom-[120px] xl:left-[35%] xl:z-20 xl:flex xl:gap-3">
           <LeftBannerArrow
-              onClick={() => controlledSwiper?.slidePrev()}
-              className="h-8 w-8 cursor-pointer fill-neutral-10 xl:w-10 xl:h-10"
+            onClick={() => controlledSwiper?.slidePrev()}
+            className="h-8 w-8 cursor-pointer fill-neutral-10 xl:h-10 xl:w-10"
           />
           <RightBannerArrow
-              onClick={() => controlledSwiper?.slideNext()}
-              className="h-8 w-8 cursor-pointer fill-neutral-10 xl:w-10 xl:h-10"
+            onClick={() => controlledSwiper?.slideNext()}
+            className="h-8 w-8 cursor-pointer fill-neutral-10 xl:h-10 xl:w-10"
           />
         </div>
       </div>
