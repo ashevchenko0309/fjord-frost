@@ -11,7 +11,7 @@ const DesktopPresentation = dynamic(() => import('./components/DesktopPresentati
 const Steps = () => {
   const [routine, setRoutine] = useState<ROUTINES>(ROUTINES.FULL);
   return (
-    <section className="bg-primary-surface px-4 py-8 lg:px-12 lg:pb-24 lg:pt-14 xl:py-28 xl:px-44">
+    <section id="skin-care" className="bg-primary-surface px-4 py-8 lg:px-12 lg:pb-24 lg:pt-14 xl:py-28 xl:px-44">
       <div className="mb-8 flex flex-col gap-4 md:flex-row md:gap-0 lg:mx-auto lg:mb-14 lg:max-w-lg">
         <button
           className={clsx(

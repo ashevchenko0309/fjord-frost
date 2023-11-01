@@ -9,7 +9,7 @@ import { WhiteLogo } from '../../../components/icons/logo';
 
 const About = () => {
   return (
-    <section className="py-16 lg:px-20 lg:py-32 xl:px-44 xl:py-40">
+    <section className="py-16 lg:px-20 lg:py-32 xl:px-44 xl:py-40" id="about">
       <div className="mb-11 md:mb-16 md:grid md:grid-cols-2 md:gap-4 lg:mb-28 lg:gap-12 xl:mb-40 xl:gap-20">
         <div className="mb-10 grid grid-cols-12 gap-3 px-4 md:order-1 md:mb-0 md:pr-6 lg:px-0">
           <div className="col-span-1 flex flex-col items-center gap-4">

@@ -50,7 +50,7 @@ const roboto = Roboto({
 
 export default async function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className={`${roboto.variable} ${crimsonPro.variable} bg-primary-background`}>
+    <html lang="en" className={`${roboto.variable} ${crimsonPro.variable} bg-primary-background scroll-smooth`}>
       <body className="bg-[#F7F9FB] font-body text-neutral-80 overflow-x-hidden max-w-[1440px] mx-auto">
         <Navbar />
         <Suspense>
