@@ -6,7 +6,7 @@ const DesktopPresentation = dynamic(() => import('./components/DesktopPresentati
 
 const Futures = () => {
   return (
-    <section className="overflow-hidden bg-primary-surface py-6 md:py-12 lg:pb-36 lg:pt-14 xl:pb-40">
+    <section id="futures" className="overflow-hidden bg-primary-surface py-6 md:py-12 lg:pb-36 lg:pt-14 xl:pb-40">
       <h2 className="mb-8 text-center font-header text-4xl font-semibold leading-10 md:mb-12 md:text-5xl lg:mb-14">
         Futures
       </h2>

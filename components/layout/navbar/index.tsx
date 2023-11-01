@@ -19,22 +19,22 @@ export default async function Navbar() {
         </div>
         <ul className="hidden gap-6 font-medium lg:flex lg:items-center">
           <li>
-            <Link href="#" className="px-3 py-1.5">
+            <Link href="/#about" className="px-3 py-1.5">
               About
             </Link>
           </li>
           <li>
-            <Link href="#" className="px-3 py-1.5">
+            <Link href="/#futures" className="px-3 py-1.5">
               Futures
             </Link>
           </li>
           <li>
-            <Link href="#" className="px-3 py-1.5">
+            <Link href="/#products" className="px-3 py-1.5">
               Products
             </Link>
           </li>
           <li>
-            <Link href="#" className="px-3 py-1.5">
+            <Link href="/#skin-care" className="px-3 py-1.5">
               Skin care
             </Link>
           </li>
