@@ -124,12 +124,14 @@ const About = () => {
         <div className="relative">
           <Image
             className="hidden w-full h-full object-cover lg:block"
-            src="https://cdn.shopify.com/s/files/1/0755/1906/6456/files/man-with-cap.png?v=1699016066"
+            unoptimized
+            src="https://cdn.shopify.com/s/files/1/0755/1906/6456/files/man-with-cap.png?v=1699016766"
             height={500}
             alt="man with a cap"
           />
           <Image
             className="w-full object-cover object-[0%_55%] md:h-full md:object-[50%_55%] lg:hidden"
+            unoptimized
             src="https://cdn.shopify.com/s/files/1/0755/1906/6456/files/man-with-cap-mobile.png?v=1699016065"
             height={500}
             alt="man with a cap"
