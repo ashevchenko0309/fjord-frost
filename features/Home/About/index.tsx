@@ -1,10 +1,4 @@
 import Image from 'next/image';
-import ForestMobileImage from '../../../assets/about/forest-mobile.png';
-import PlantMobileImage from '../../../assets/about/plant-mobile.png';
-import ManWithCapMobileImage from '../../../assets/about/man-with-cap-mobile.png';
-import ForestImage from '../../../assets/about/forest.png';
-import PlantImage from '../../../assets/about/plant.png';
-import ManWithCapImage from '../../../assets/about/man-with-cap.png';
 import { WhiteLogo } from '../../../components/icons/logo';
 
 const About = () => {
@@ -41,13 +35,13 @@ const About = () => {
           <WhiteLogo className="absolute left-1/2 top-1/2 z-10 h-36 w-36 -translate-x-1/2 -translate-y-1/2" />
           <Image
             className="hidden h-full w-full object-cover lg:block"
-            src={ForestImage}
+            src="https://cdn.shopify.com/s/files/1/0755/1906/6456/files/forest.png?v=1699016066"
             height={500}
             alt="forest background"
           />
           <Image
             className="h-full w-full object-cover md:h-full md:object-[0%_65%] lg:hidden"
-            src={ForestMobileImage}
+            src="https://cdn.shopify.com/s/files/1/0755/1906/6456/files/forest-mobile.png?v=1699016066"
             height={500}
             alt="forest background"
           />
@@ -87,13 +81,13 @@ const About = () => {
         <div className="relative">
           <Image
             className="hidden h-full w-full object-cover lg:block"
-            src={PlantImage}
+            src="https://cdn.shopify.com/s/files/1/0755/1906/6456/files/plant.png?v=1699016066"
             height={500}
             alt="plant background"
           />
           <Image
             className="w-full object-cover md:h-full md:object-[80%_0%] lg:hidden"
-            src={PlantMobileImage}
+            src="https://cdn.shopify.com/s/files/1/0755/1906/6456/files/plant-mobile.png?v=1699016065"
             height={500}
             alt="plant background"
           />
@@ -130,13 +124,13 @@ const About = () => {
         <div className="relative">
           <Image
             className="hidden w-full h-full object-cover lg:block"
-            src={ManWithCapImage}
+            src="https://cdn.shopify.com/s/files/1/0755/1906/6456/files/man-with-cap.png?v=1699016066"
             height={500}
             alt="man with a cap"
           />
           <Image
             className="w-full object-cover object-[0%_55%] md:h-full md:object-[50%_55%] lg:hidden"
-            src={ManWithCapMobileImage}
+            src="https://cdn.shopify.com/s/files/1/0755/1906/6456/files/man-with-cap-mobile.png?v=1699016065"
             height={500}
             alt="man with a cap"
           />
