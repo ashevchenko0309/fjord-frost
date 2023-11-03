@@ -24,46 +24,6 @@ const Products: FC<{ products: Product[] }> = ({ products }) => {
                   />
               </div>
           ))}
-        {/*<div>*/}
-        {/*  <Card*/}
-        {/*    title="Facial Cleanser especially for men"*/}
-        {/*    description="It's designed to effortlessly clean your face"*/}
-        {/*    price="€35.00"*/}
-        {/*    src={FacialCleanserImage}*/}
-        {/*    alt="Facial Cleanser especially for men"*/}
-        {/*    url="#"*/}
-        {/*  />*/}
-        {/*</div>*/}
-        {/*<div>*/}
-        {/*  <Card*/}
-        {/*    title="Oil-Free Hydrating Face Gel"*/}
-        {/*    description="Nordic-inspired, no-fuss face gel"*/}
-        {/*    price="€35.00"*/}
-        {/*    src={OilFreeHydratingFaceGelImage}*/}
-        {/*    alt="Oil-Free Hydrating Face Gel"*/}
-        {/*    url="#"*/}
-        {/*  />*/}
-        {/*</div>*/}
-        {/*<div>*/}
-        {/*  <Card*/}
-        {/*    title="Premium anti-Age face Day Cream "*/}
-        {/*    description="Fine lines appear diminished"*/}
-        {/*    price="€59.00"*/}
-        {/*    src={AntiAgeFaceDayCreamImage}*/}
-        {/*    alt="Premium anti-Age face Day Cream "*/}
-        {/*    url="#"*/}
-        {/*  />*/}
-        {/*</div>*/}
-        {/*<div>*/}
-        {/*  <Card*/}
-        {/*    title="Antioxidant Face Gel Booster"*/}
-        {/*    description="Hydrating and fresh"*/}
-        {/*    price="€49.00"*/}
-        {/*    src={AntioxidantImage}*/}
-        {/*    alt="Antioxidant Face Gel Booster"*/}
-        {/*    url="#"*/}
-        {/*  />*/}
-        {/*</div>*/}
       </div>
       <div className="lg:hidden">
         <MobilePresentation />
