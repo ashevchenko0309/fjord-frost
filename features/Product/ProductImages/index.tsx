@@ -1,11 +1,12 @@
 "use client"
 
 import MobilePresentation from "./components/MobilePresentation";
+import {FC} from "react";
 
-const ProductImages = () => {
+const ProductImages: FC<{ images: {src: string, altText: string}[] }> = ({ images }) => {
     return (
         <section>
-            <MobilePresentation />
+            <MobilePresentation images={images} />
         </section>
     )
 }

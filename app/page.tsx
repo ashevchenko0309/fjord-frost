@@ -5,6 +5,7 @@ import CallToAction from "../features/Home/CallToAction";
 import Steps from "../features/Home/Steps";
 import Reviews from "../features/Home/Reviews";
 import Banner from "../features/Home/Banner";
+import {getProducts} from "../lib/shopify";
 
 export const runtime = 'edge';
 
@@ -16,12 +17,14 @@ export const metadata = {
 };
 
 export default async function HomePage() {
+    const products = await getProducts({});
+
   return (
     <>
       <Banner />
       <About />
       <Futures />
-      <Products />
+      <Products products={products} />
       <CallToAction />
       <Steps />
       <Reviews />

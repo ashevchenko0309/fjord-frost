@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import MobileMenu from './mobile-menu';
 import { BlackLogo } from '../../icons/logo';
-import {SolidButton, TextButton} from '../../uiKit/Button/Button';
+import { SolidButton, TextButton } from '../../uiKit/Button/Button';
+import Cart from '../../cart';
 
 const { SITE_NAME } = process.env;
 
@@ -40,21 +41,12 @@ export default async function Navbar() {
           </li>
         </ul>
         <div className="hidden items-center gap-4 lg:flex">
-          <Link href="#">
-            <TextButton
-              text="Card"
-              endIcon={
-                <span className="rounded-full bg-primary-background px-2 py-0.5 text-center font-medium text-neutral-50">
-                  0
-                </span>
-              }
-            />
-          </Link>
-            <SolidButton text="Discover" size="small" />
+          <Cart />
+          <SolidButton text="Discover" size="small" />
         </div>
       </div>
       <div className="block flex-none lg:hidden">
-        <MobileMenu />
+        <MobileMenu><Cart /></MobileMenu>
       </div>
     </nav>
   );

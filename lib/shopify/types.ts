@@ -116,6 +116,24 @@ export type ShopifyProduct = {
   description: string;
   descriptionHtml: string;
   options: ProductOption[];
+  volume?: {
+    value: string
+  };
+  ingredients?: {
+    value: string
+  };
+  aroma?: {
+    value: string
+  };
+  benefits?: {
+    value: string
+  };
+  certificates?: {
+    value: string
+  };
+  presentation?: {
+    value: string
+  };
   priceRange: {
     maxVariantPrice: Money;
     minVariantPrice: Money;
