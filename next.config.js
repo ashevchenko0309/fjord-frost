@@ -7,6 +7,9 @@ module.exports = {
   experimental: {
     serverActions: true
   },
+  compress: true,
+  optimizeFonts: true,
+  swcMinify: true,
   images: {
     formats: ['image/avif', 'image/webp'],
     remotePatterns: [

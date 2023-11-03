@@ -26,8 +26,8 @@ export default async function HomePage() {
       <Futures />
       <Products products={products} />
       <CallToAction />
-      <Steps />
-      <Reviews />
+      {/*<Steps />*/}
+      {/*<Reviews />*/}
     </>
   );
 }
