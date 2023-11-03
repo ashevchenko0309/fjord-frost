@@ -13,3 +13,15 @@
 .titles-slider .swiper-slide.swiper-slide-active {
     opacity: 1 !important;
 }
+
+.product-description ul, .product-description ol {
+    list-style: disc;
+}
+
+@layer base {
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+}
