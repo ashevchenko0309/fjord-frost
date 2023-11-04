@@ -31,7 +31,7 @@ const MobilePresentation = () => {
                 <Image
                   src="https://cdn.shopify.com/s/files/1/0755/1906/6456/files/face-gel_png.webp?v=1699100906"
                   alt="Oil-free hydrating face gel"
-                  className="md:w-full"
+                  className="w-full object-cover"
                   width={258}
                   height={429}
                 />
@@ -53,7 +53,7 @@ const MobilePresentation = () => {
                 <Image
                   src="https://cdn.shopify.com/s/files/1/0755/1906/6456/files/antioxidant_png_bfc6ed30-5ed9-4fbd-96a8-182873b08b11.webp?v=1699100906"
                   alt="Antioxidant face gel booster"
-                  className="md:w-full"
+                  className="w-full object-cover"
                   width={258}
                   height={429}
                 />
@@ -77,7 +77,7 @@ const MobilePresentation = () => {
                   width={258}
                   height={429}
                   alt="Anti-age face day cream"
-                  className="md:w-full"
+                  className="w-full object-cover"
                 />
                 <div className="absolute left-0 top-0 h-full w-full bg-gradient-to-t from-black to-60%" />
                 <p className="absolute bottom-8 w-full text-center font-header text-2xl font-semibold leading-10 text-neutral-10">
@@ -99,7 +99,7 @@ const MobilePresentation = () => {
                   alt="Facial cleanser"
                   width={258}
                   height={429}
-                  className="md:w-full"
+                  className="w-full object-cover"
                 />
                 <div className="absolute left-0 top-0 h-full w-full bg-gradient-to-t from-black to-60%" />
                 <p className="absolute bottom-8 w-full text-center font-header text-2xl font-semibold leading-10 text-neutral-10">

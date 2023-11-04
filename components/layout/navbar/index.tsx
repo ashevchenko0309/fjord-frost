@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import MobileMenu from './mobile-menu';
 import { BlackLogo } from '../../icons/logo';
-import { SolidButton, TextButton } from '../../uiKit/Button/Button';
+import { SolidButton } from '../../uiKit/Button/Button';
 import Cart from '../../cart';
 
 const { SITE_NAME } = process.env;

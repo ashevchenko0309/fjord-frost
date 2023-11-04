@@ -33,7 +33,9 @@ const Card: FC<CardProps> = ({ title, description, price, src, alt, url = '#' })
             />
           </div>
         </div>
-        <SolidButton text="Discover" className="w-full justify-center" />
+        <div className="mb-6 block lg:hidden">
+          <SolidButton text="Discover" className="w-full justify-center" />
+        </div>
       </div>
     </Link>
   );
