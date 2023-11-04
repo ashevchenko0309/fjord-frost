@@ -1,30 +1,5 @@
 import { BannerItemProps } from './interfaces';
 
-import OnlyMenImage from '../../../assets/main-slider/men-only.png';
-import AntiAgeComplexImage from '../../../assets/main-slider/anti-age-complex.png';
-import HydradingFormulaImage from '../../../assets/main-slider/hydrading-formula.png';
-import MoistureBoostImage from '../../../assets/main-slider/moisture-boost.png';
-
-import OilFreeHydrationgFaceGelImage from '../../../assets/main-slider/oil-free-hydrationg-face-gel.png';
-import ManInAForestLookingInCameraImage from '../../../assets/main-slider/man-in-a-forest-looking-in-camera.png';
-import OilFreeHydrationgFaceGelOnGrassImage from '../../../assets/main-slider/oil-free-hydrationg-face-gel-on-grass.png';
-import OilFreeHydrationgFaceGelOnTreeImage from '../../../assets/main-slider/oil-free-hydrationg-face-gel-on-tree.png';
-
-import AntiAgeFaceDayCreamImage from '../../../assets/main-slider/anti-age-face-day-cream.png';
-import ManWithEaringLookingInCameraImage from '../../../assets/main-slider/man-with-earing-looking-in-camera.png';
-import AntiAgeFaceDayCreamOnTreeImage from '../../../assets/main-slider/anti-age-face-day-cream-on-tree.png';
-import AntiAgeFaceDayCreamOnGrassImage from '../../../assets/main-slider/anti-age-face-day-cream-on-grass.png';
-
-import AntioxidantFaceGelBoosterImage from '../../../assets/main-slider/antioxidant-face-gel-booster.png';
-import ManLookingInASkyImage from '../../../assets/main-slider/man-looking-in-a-sky.png';
-import AntioxidantFaceGelBoosterOnGrassImage from '../../../assets/main-slider/antioxidant-face-gel-booster-on-grass.png';
-import AntioxidantFaceGelBoosterOnTreeImage from '../../../assets/main-slider/antioxidant-face-gel-booster-on-tree.png';
-
-import FacialCleanerImage from '../../../assets/main-slider/facial-cleaner.png';
-import WetManLookingInCameraImage from '../../../assets/main-slider/wet-man-looking-in-camera.png';
-import FacialCleanerOnTreeImage from '../../../assets/main-slider/facial-cleaner-on-tree.png';
-import FacialCleanerOnGrassImage from '../../../assets/main-slider/facial-cleaner-on-grass.png';
-
 export const MAIN_SLIDES = [
   {
     entry: 'Based in Copenhagen',
@@ -93,114 +68,114 @@ export const MAIN_SLIDES = [
 export const SECONDARY_SLIDES: BannerItemProps[][] = [
   [
     {
-      src: OnlyMenImage,
+      src: "https://cdn.shopify.com/s/files/1/0755/1906/6456/files/men-only_png.webp?v=1699093897",
       alt: 'only men banner image',
       priority: true,
       title: 'Men only'
     },
     {
-      src: AntiAgeComplexImage,
+      src: "https://cdn.shopify.com/s/files/1/0755/1906/6456/files/anti-age-complex_png.webp?v=1699093898",
       alt: 'anti age complex image',
       priority: true,
       title: 'Anti-age complex'
     },
     {
-      src: MoistureBoostImage,
+      src: "https://cdn.shopify.com/s/files/1/0755/1906/6456/files/hydrading-formula_png.webp?v=1699093898",
+      alt: 'hydrating formula image',
+      priority: false,
+      title: 'Hydrating formula '
+    },
+    {
+      src: "https://cdn.shopify.com/s/files/1/0755/1906/6456/files/STUDIO_WHITE_png.webp?v=1699094174",
       alt: 'moisture boost image',
       priority: true,
       title: 'Moisture boost'
-    },
-    {
-      src: HydradingFormulaImage,
-      alt: 'hydrating formula image',
-      priority: true,
-      title: 'Hydrating formula '
     }
   ],
   [
     {
-      src: OilFreeHydrationgFaceGelImage,
+      src: "https://cdn.shopify.com/s/files/1/0755/1906/6456/files/oil-free-hydrationg-face-gel_png.webp?v=1699093897",
       alt: 'oil free hydration face gel image',
       priority: true,
     },
     {
-      src: ManInAForestLookingInCameraImage,
+      src: "https://cdn.shopify.com/s/files/1/0755/1906/6456/files/man-in-a-forest-looking-in-camera_png.webp?v=1699093897",
       alt: 'main in a forest looking in camera',
       priority: true,
     },
     {
-      src: OilFreeHydrationgFaceGelOnGrassImage,
+      src: "https://cdn.shopify.com/s/files/1/0755/1906/6456/files/oil-free-hydrationg-face-gel-on-grass_png.webp?v=1699093898",
       alt: 'oil free hydration face gel on grass',
       priority: true,
     },
     {
-      src: OilFreeHydrationgFaceGelOnTreeImage,
+      src: "https://cdn.shopify.com/s/files/1/0755/1906/6456/files/oil-free-hydrationg-face-gel-on-tree_png.webp?v=1699093897",
       alt: 'oil free hydration face gel on tree',
       priority: true,
     }
   ],
     [
       {
-        src: AntiAgeFaceDayCreamImage,
+        src: "https://cdn.shopify.com/s/files/1/0755/1906/6456/files/anti-age-face-day-cream_png.webp?v=1699093898",
         alt: 'anti age face day cream product',
         priority: true,
       },
       {
-        src: ManWithEaringLookingInCameraImage,
+        src: "https://cdn.shopify.com/s/files/1/0755/1906/6456/files/man-with-earing-looking-in-camera_png.webp?v=1699093897",
         alt: 'man with earring looking in camera',
         priority: true,
       },
       {
-        src: AntiAgeFaceDayCreamOnTreeImage,
+        src: "https://cdn.shopify.com/s/files/1/0755/1906/6456/files/anti-age-face-day-cream-on-tree_png.webp?v=1699093897",
         alt: 'anti age face day cream on tree product',
         priority: true,
       },
       {
-        src: AntiAgeFaceDayCreamOnGrassImage,
+        src: "https://cdn.shopify.com/s/files/1/0755/1906/6456/files/anti-age-face-day-cream-on-grass_png.webp?v=1699093898",
         alt: 'anti age face day cream on grass product',
         priority: true,
       }
     ],
   [
     {
-      src: AntioxidantFaceGelBoosterImage,
+      src: "https://cdn.shopify.com/s/files/1/0755/1906/6456/files/antioxidant-face-gel-booster_png.webp?v=1699093898",
       alt: 'antioxidant face gel booster product',
       priority: true,
     },
     {
-      src: ManLookingInASkyImage,
+      src: "https://cdn.shopify.com/s/files/1/0755/1906/6456/files/man-looking-in-a-sky_png.webp?v=1699093898",
       alt: 'man looking in a sky',
       priority: true,
     },
     {
-      src: AntioxidantFaceGelBoosterOnGrassImage,
+      src: "https://cdn.shopify.com/s/files/1/0755/1906/6456/files/antioxidant-face-gel-booster-on-grass_png.webp?v=1699093897",
       alt: 'antioxidant face gel booster on grass product',
       priority: true,
     },
     {
-      src: AntioxidantFaceGelBoosterOnTreeImage,
+      src: "https://cdn.shopify.com/s/files/1/0755/1906/6456/files/antioxidant-face-gel-booster-on-tree_png.webp?v=1699093898",
       alt: 'antioxidant face gel booster on tree product',
       priority: true,
     }
   ],
   [
     {
-      src: FacialCleanerImage,
+      src: "https://cdn.shopify.com/s/files/1/0755/1906/6456/files/facial-cleaner_png.webp?v=1699093898",
       alt: 'facial cleaner product',
       priority: true,
     },
     {
-      src: WetManLookingInCameraImage,
+      src: "https://cdn.shopify.com/s/files/1/0755/1906/6456/files/wet-man-looking-in-camera_png.webp?v=1699093898",
       alt: 'wet man looking in camera',
       priority: true,
     },
     {
-      src: FacialCleanerOnTreeImage,
+      src: "https://cdn.shopify.com/s/files/1/0755/1906/6456/files/facial-cleaner-on-tree_png.webp?v=1699093898",
       alt: 'facial cleaner on tree product',
       priority: true,
     },
     {
-      src: FacialCleanerOnGrassImage,
+      src: "https://cdn.shopify.com/s/files/1/0755/1906/6456/files/facial-cleaner-on-grass_png.webp?v=1699093898",
       alt: 'facial cleaner on grass product',
       priority: true,
     }

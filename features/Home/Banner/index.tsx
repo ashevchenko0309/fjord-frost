@@ -80,9 +80,17 @@ const Banner = () => {
             slidesPerView={1.8}
             spaceBetween={24}
             breakpoints={{
-              600: {
+              480: {
+                slidesPerView: 3,
+                spaceBetween: 10
+              },
+              768: {
                 slidesPerView: 2.4,
-                spaceBetween: 32
+                spaceBetween: 10
+              },
+              1024: {
+                slidesPerView: 3.3,
+                spaceBetween: 10
               },
               1280: {
                 slidesPerView: 4,

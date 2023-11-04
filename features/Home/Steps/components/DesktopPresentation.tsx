@@ -1,10 +1,4 @@
 import Image from 'next/image';
-import FacialCleanerImage from '../../../../assets/steps/facial-cleaner.png';
-import AntioxidantImage from '../../../../assets/steps/antioxidant.png';
-import AntiAgeFaceDayCreamImage from '../../../../assets/steps/anti-age-face.png';
-import OilFreeHydrationFaceGelImage from '../../../../assets/steps/oil-free-evening-step-2.png';
-import SimpleRoutinePlantImage from '../../../../assets/routines/simple-routine-plant.png';
-import OilFreeHydratingEvening from '../../../../assets/steps/oil-free-hydrating-evening.png'
 import { FC } from 'react';
 import { ROUTINES } from '../interfaces';
 
@@ -15,9 +9,9 @@ const DesktopPresentation: FC<{ routine: ROUTINES }> = ({ routine }) => {
         <div className="col-span-8 flex flex-col gap-8">
           <div className="flex items-center rounded-2xl bg-neutral-10">
             <Image
-              src={FacialCleanerImage}
+              src="https://cdn.shopify.com/s/files/1/0755/1906/6456/files/facial-cleaner_png_334cd1b6-dee7-4fb9-951b-a21060f13ca9.webp?v=1699094684"
               alt="facial cleaner"
-              className="aspect-square h-full shrink-0 rounded-l-2xl object-cover object-top"
+              className="aspect-square h-full shrink-0 rounded-l-2xl object-none object-top"
               unoptimized
               height={256}
               width={256}
@@ -50,9 +44,9 @@ const DesktopPresentation: FC<{ routine: ROUTINES }> = ({ routine }) => {
               </p>
             </div>
             <Image
-              src={AntioxidantImage}
+              src="https://cdn.shopify.com/s/files/1/0755/1906/6456/files/antioxidant_png.webp?v=1699094685"
               alt="antioxidant gace gel booster"
-              className="aspect-square h-full shrink-0 rounded-r-2xl object-cover object-top"
+              className="aspect-square h-full shrink-0 rounded-r-2xl object-none object-top"
               unoptimized
               height={256}
               width={256}
@@ -60,9 +54,9 @@ const DesktopPresentation: FC<{ routine: ROUTINES }> = ({ routine }) => {
           </div>
           <div className="flex items-center rounded-2xl bg-neutral-10">
             <Image
-              src={AntiAgeFaceDayCreamImage}
+              src="https://cdn.shopify.com/s/files/1/0755/1906/6456/files/anti-age-face_png.webp?v=1699094684"
               alt="anti age face day cream image"
-              className="aspect-square h-full w-64 shrink-0 rounded-l-2xl object-cover object-top"
+              className="aspect-square h-full w-64 shrink-0 rounded-l-2xl object-none object-top"
               unoptimized
               height={256}
               width={256}
@@ -85,11 +79,12 @@ const DesktopPresentation: FC<{ routine: ROUTINES }> = ({ routine }) => {
         <div className="col-span-4">
           <div className="flex h-full flex-col rounded-2xl bg-neutral-10">
             <Image
-              src={OilFreeHydratingEvening}
+              src="https://cdn.shopify.com/s/files/1/0755/1906/6456/files/oil-free-hydrating-evening_png.webp?v=1699094685"
               alt="oil free hydratuing face gel"
               className="h-full max-h-[584px] w-full rounded-t-2xl object-cover"
               unoptimized
               height={584}
+              width={320}
             />
             <div className="flex w-full flex-col gap-6 p-8">
               <div className="flex items-center gap-4">
@@ -110,59 +105,65 @@ const DesktopPresentation: FC<{ routine: ROUTINES }> = ({ routine }) => {
   }
 
   return (
-      <div className="mb-8 grid grid-cols-12 gap-8">
-        <div className="col-span-8 flex flex-col gap-8">
-          <div className="flex items-center rounded-2xl bg-neutral-10">
-            <Image
-                src={AntiAgeFaceDayCreamImage}
-                alt="facial cleaner"
-                className="aspect-square h-full shrink-0 rounded-l-2xl object-cover object-top"
-                unoptimized
-                height={256}
-                width={256}
-            />
-            <div className="flex flex-col gap-6 p-8">
-              <div className="flex items-center gap-4">
-                <div className="rounded-full bg-yellow px-8 py-1.5 text-xs font-semibold text-neutral-80">
-                  Morning
-                </div>
-                <p className="font-header text-lg text-neutral-50">Step 1/1</p>
+    <div className="mb-8 grid grid-cols-12 gap-8">
+      <div className="col-span-8 flex flex-col gap-8">
+        <div className="flex items-center rounded-2xl bg-neutral-10">
+          <Image
+            src="https://cdn.shopify.com/s/files/1/0755/1906/6456/files/anti-age-face_png.webp?v=1699094684"
+            alt="facial cleaner"
+            className="aspect-square h-full shrink-0 rounded-l-2xl object-none object-top"
+            unoptimized
+            height={256}
+            width={256}
+          />
+          <div className="flex flex-col gap-6 p-8">
+            <div className="flex items-center gap-4">
+              <div className="rounded-full bg-yellow px-8 py-1.5 text-xs font-semibold text-neutral-80">
+                Morning
               </div>
-              <p className="text-lg leading-6 text-neutral-100">
-                Apply premium Anti-age Face Day Cream gently to your skin for a youthful and revitalized appearance. Your fine lines fade and your skin becomes firmer with a radiant glow together with our anti-age formula
-              </p>
+              <p className="font-header text-lg text-neutral-50">Step 1/1</p>
             </div>
+            <p className="text-lg leading-6 text-neutral-100">
+              Apply premium Anti-age Face Day Cream gently to your skin for a youthful and
+              revitalized appearance. Your fine lines fade and your skin becomes firmer with a
+              radiant glow together with our anti-age formula
+            </p>
+          </div>
+        </div>
+        <Image
+          src="https://cdn.shopify.com/s/files/1/0755/1906/6456/files/routine-full-plant_png.webp?v=1699094634"
+          alt="simple routine plant"
+          className="aspect-video h-full max-h-[300px] w-full shrink-0 rounded-2xl object-none object-top"
+          width={744}
+          height={300}
+        />
+      </div>
+      <div className="col-span-4">
+        <div className="flex h-full flex-col justify-between rounded-2xl bg-neutral-10">
+          <div className="flex w-full flex-col gap-6 p-8">
+            <div className="flex items-center gap-4">
+              <div className="rounded-full bg-blue px-8 py-1.5 text-xs font-semibold text-neutral-80">
+                Evening
+              </div>
+              <p className="font-header text-lg text-neutral-50">Step 1/1</p>
+            </div>
+            <p className="text-lg leading-6 text-neutral-100">
+              Apply our Oil- free Hydrating Face Gel to you face for no more dry, tired-looking skin
+              - this gel deeply hydrates, leaving it looking fresh and revitalized.
+            </p>
           </div>
           <Image
-              src={SimpleRoutinePlantImage}
-              alt="simple routine plant"
-              className="aspect-video w-full h-full shrink-0 rounded-2xl object-cover object-top max-h-[300px]"
+            src="https://cdn.shopify.com/s/files/1/0755/1906/6456/files/oil-free-evening-step-2_png.webp?v=1699094684"
+            alt="oil free hydratuing face gel"
+            className="h-full max-h-[332px] w-full rounded-b-2xl object-none xl:object-[0%_10%]"
+            unoptimized
+            height={332}
+            width={320}
           />
         </div>
-        <div className="col-span-4">
-          <div className="flex h-full justify-between flex-col rounded-2xl bg-neutral-10">
-            <div className="flex w-full flex-col gap-6 p-8">
-              <div className="flex items-center gap-4">
-                <div className="rounded-full bg-blue px-8 py-1.5 text-xs font-semibold text-neutral-80">
-                  Evening
-                </div>
-                <p className="font-header text-lg text-neutral-50">Step 1/1</p>
-              </div>
-              <p className="text-lg leading-6 text-neutral-100">
-                Apply our Oil- free Hydrating Face Gel to you face for no more dry, tired-looking skin - this gel deeply hydrates, leaving it looking fresh and revitalized.
-              </p>
-            </div>
-            <Image
-                src={OilFreeHydrationFaceGelImage}
-                alt="oil free hydratuing face gel"
-                className="h-full w-full rounded-b-2xl object-cover max-h-[332px] xl:object-[0%_10%]"
-                unoptimized
-                height={332}
-            />
-          </div>
-        </div>
       </div>
-  )
+    </div>
+  );
 };
 
 export default DesktopPresentation;

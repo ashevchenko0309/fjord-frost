@@ -12,6 +12,12 @@ const productFragment = /* GraphQL */ `
     volume: metafield(namespace: "custom", key: "volume") {
       value
     }
+    presentation_title: metafield(namespace: "custom", key: "presentation_title") {
+      value
+    }
+    presentation_description: metafield(namespace: "custom", key: "presentation_description") {
+      value
+    }
     benefits: metafield(namespace: "custom", key: "benefits") {
       value
     }

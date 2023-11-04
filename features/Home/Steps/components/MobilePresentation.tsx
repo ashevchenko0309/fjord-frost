@@ -1,9 +1,4 @@
 import Image from 'next/image';
-import FacialCleanerImage from '../../../../assets/steps/facial-cleaner-mobile.png';
-import AntioxidantImage from '../../../../assets/steps/antioxidant-face-gel-mobile.png';
-import AntiAgeFaceDayCreamImage from '../../../../assets/steps/anti-age-face-day-cream-mobile.png';
-import OilFreeHydrationFaceGelImage from '../../../../assets/steps/oil-free-hydrating-face-gel-mobile.png';
-import RoutineFullPlantImage from '../../../../assets/routines/routine-full-plant.png';
 import { FC } from 'react';
 import { ROUTINES } from '../interfaces';
 
@@ -25,10 +20,12 @@ const MobilePresentation: FC<{ routine: ROUTINES }> = ({ routine }) => {
             </p>
           </div>
           <Image
-            src={FacialCleanerImage}
+            src="https://cdn.shopify.com/s/files/1/0755/1906/6456/files/facial-cleaner-mobile_png.webp?v=1699094684"
+            unoptimized
             alt="facial cleaner"
-            className="h-full w-full rounded-b-2xl object-cover md:rounded-l-2xl md:rounded-r-none"
+            className="h-full w-full rounded-b-2xl object-none md:rounded-l-2xl md:rounded-r-none"
             height={320}
+            width={343}
           />
         </div>
         <div className="flex flex-col rounded-2xl bg-neutral-10 md:flex-row md:items-center">
@@ -45,10 +42,12 @@ const MobilePresentation: FC<{ routine: ROUTINES }> = ({ routine }) => {
             </p>
           </div>
           <Image
-            src={AntioxidantImage}
+            unoptimized
+            src="https://cdn.shopify.com/s/files/1/0755/1906/6456/files/antioxidant-face-gel-mobile_png.webp?v=1699094684"
             alt="antioxidant gace gel booster"
-            className="h-full w-full rounded-b-2xl object-cover md:rounded-l-none md:rounded-r-2xl"
+            className="h-full w-full rounded-b-2xl object-none md:rounded-l-none md:rounded-r-2xl"
             height={320}
+            width={343}
           />
         </div>
         <div className="flex flex-col rounded-2xl bg-neutral-10 md:flex-row md:items-center">
@@ -66,10 +65,12 @@ const MobilePresentation: FC<{ routine: ROUTINES }> = ({ routine }) => {
             </p>
           </div>
           <Image
-            src={AntiAgeFaceDayCreamImage}
+            unoptimized
+            src="https://cdn.shopify.com/s/files/1/0755/1906/6456/files/anti-age-face-day-cream-mobile_png.webp?v=1699094685"
             alt="anti age face day cream image"
-            className="h-full w-full rounded-b-2xl object-cover md:rounded-l-2xl md:rounded-r-none"
+            className="h-full w-full rounded-b-2xl object-none md:rounded-l-2xl md:rounded-r-none"
             height={320}
+            width={343}
           />
         </div>
         <div className="flex flex-col rounded-2xl bg-neutral-10 md:flex-row md:items-center">
@@ -86,10 +87,12 @@ const MobilePresentation: FC<{ routine: ROUTINES }> = ({ routine }) => {
             </p>
           </div>
           <Image
-            src={OilFreeHydrationFaceGelImage}
+            unoptimized
+            src="https://cdn.shopify.com/s/files/1/0755/1906/6456/files/oil-free-hydrating-face-gel-mobile_png.webp?v=1699094684"
             alt="oil free hydratuing face gel"
-            className="h-full w-full rounded-b-2xl object-cover md:rounded-l-none md:rounded-r-2xl"
+            className="h-full w-full rounded-b-2xl object-none md:rounded-l-none md:rounded-r-2xl"
             height={320}
+            width={343}
           />
         </div>
       </div>
@@ -113,10 +116,12 @@ const MobilePresentation: FC<{ routine: ROUTINES }> = ({ routine }) => {
           </p>
         </div>
         <Image
-          src={AntiAgeFaceDayCreamImage}
+          unoptimized
+          src="https://cdn.shopify.com/s/files/1/0755/1906/6456/files/anti-age-face-day-cream-mobile_png.webp?v=1699094685"
           alt="facial cleaner"
-          className="h-full w-full rounded-b-2xl object-cover md:rounded-l-2xl md:rounded-r-none"
-          height={300}
+          className="h-full w-full rounded-b-2xl object-none md:rounded-l-2xl md:rounded-r-none"
+          height={320}
+          width={343}
         />
       </div>
       <div className="flex flex-col rounded-2xl bg-neutral-10 md:flex-row md:items-center">
@@ -133,14 +138,23 @@ const MobilePresentation: FC<{ routine: ROUTINES }> = ({ routine }) => {
           </p>
         </div>
         <Image
-          src={OilFreeHydrationFaceGelImage}
+          unoptimized
+          src="https://cdn.shopify.com/s/files/1/0755/1906/6456/files/oil-free-hydrating-face-gel-mobile_png.webp?v=1699094684"
           alt="oil free hydratuing face gel"
-          className="h-full w-full rounded-b-2xl object-cover md:rounded-l-none md:rounded-r-2xl"
-          height={332}
+          className="h-full w-full rounded-b-2xl object-none md:rounded-l-none md:rounded-r-2xl"
+          height={320}
+          width={343}
         />
       </div>
       <div className="relative">
-        <Image src={RoutineFullPlantImage} alt="simple routine plant" className="w-full rounded-2xl" height={300} />
+        <Image
+          src="https://cdn.shopify.com/s/files/1/0755/1906/6456/files/simple-routine-plant_png.webp?v=1699094633"
+          alt="simple routine plant"
+          className="w-full rounded-2xl"
+          height={320}
+          width={343}
+          unoptimized
+        />
       </div>
     </div>
   );

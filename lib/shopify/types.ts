@@ -116,6 +116,12 @@ export type ShopifyProduct = {
   description: string;
   descriptionHtml: string;
   options: ProductOption[];
+  presentation_title?: {
+    value: string
+  }
+  presentation_description?: {
+    value: string
+  }
   volume?: {
     value: string
   };

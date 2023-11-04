@@ -1,6 +1,4 @@
 import Image from 'next/image';
-import CallToActionMobileImage from '../../../assets/call-to-action/call-to-action-mobile.png';
-import CallToActionDesktopImage from '../../../assets/call-to-action/call-to-action-desktop.png';
 
 const CallToAction = () => {
   return (
@@ -10,14 +8,20 @@ const CallToAction = () => {
         skin care for men
       </h2>
       <Image
+        unoptimized
         className="h-full w-full md:hidden"
-        src={CallToActionMobileImage}
+        src="https://cdn.shopify.com/s/files/1/0755/1906/6456/files/call-to-action-mobile_png.webp?v=1699093518"
         alt="call to action mobile"
+        width={375}
+        height={445}
       />
       <Image
-        className="hidden md:block h-full w-full"
-        src={CallToActionDesktopImage}
+        unoptimized
+        className="hidden h-full w-full md:block"
+        src="https://cdn.shopify.com/s/files/1/0755/1906/6456/files/call-to-action-desktop_png.webp?v=1699093519"
         alt="call to action desktop"
+        width={1440}
+        height={420}
       />
     </section>
   );

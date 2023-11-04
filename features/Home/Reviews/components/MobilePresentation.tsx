@@ -3,11 +3,6 @@ import { LeftBannerArrow, RightBannerArrow } from '../../../../components/icons/
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { useState } from 'react';
 import { useSwiper } from 'swiper/swiper-react';
-import JanNovakImage from '../../../../assets/review/jan-novak.png';
-import StafanMullerImage from '../../../../assets/review/stefan-muller.png';
-import AlbertTranImage from '../../../../assets/review/albert-tran.png';
-import MikaelKarlssonImage from '../../../../assets/review/mikael-karlson.png';
-import HenrikJensenImage from '../../../../assets/review/henrik-jensen.png';
 import Review from './Review';
 import clsx from 'clsx';
 
@@ -39,7 +34,7 @@ const MobilePresentation = () => {
       >
         <SwiperSlide>
           <Review
-            src={JanNovakImage}
+            src="https://cdn.shopify.com/s/files/1/0755/1906/6456/files/jan-novak_png.webp?v=1699094419"
             alt="Jan Novak review"
             text="Frost & Fjord is a game-changer! I've been using their facial cleanser, and it leaves my skin feeling refreshed and clean without any dryness"
             fullname="Jan Novak"
@@ -47,7 +42,7 @@ const MobilePresentation = () => {
         </SwiperSlide>
         <SwiperSlide>
           <Review
-            src={StafanMullerImage}
+            src="https://cdn.shopify.com/s/files/1/0755/1906/6456/files/stefan-muller_png.webp?v=1699094418"
             alt="Stefan Müller review"
             text="Its noticeable difference in how my skin feels and looks. It's like a burst of energy for my face, and I'm loving the youthful glow it gives me"
             fullname="Stefan Müller"
@@ -55,7 +50,7 @@ const MobilePresentation = () => {
         </SwiperSlide>
         <SwiperSlide>
           <Review
-            src={AlbertTranImage}
+            src="https://cdn.shopify.com/s/files/1/0755/1906/6456/files/albert-tran_png.webp?v=1699094418"
             alt="Albert Tran"
             text="I really liked the cleanser, my skin felt so much better"
             fullname="Albert Tran"
@@ -63,7 +58,7 @@ const MobilePresentation = () => {
         </SwiperSlide>
         <SwiperSlide>
           <Review
-            src={MikaelKarlssonImage}
+            src="https://cdn.shopify.com/s/files/1/0755/1906/6456/files/mikael-karlson_png.webp?v=1699094418"
             alt="Mikael Karlsson review"
             text="The refreshing feeling it provides in the morning sets a positive tone for my entire day. Highly recommended!"
             fullname="Mikael Karlsson"
@@ -71,7 +66,7 @@ const MobilePresentation = () => {
         </SwiperSlide>
         <SwiperSlide>
           <Review
-            src={HenrikJensenImage}
+            src="https://cdn.shopify.com/s/files/1/0755/1906/6456/files/henrik-jensen_png.webp?v=1699094419"
             alt="Henrik Jensen review"
             text="Thanks I feel more confident and comfortable throughout the day. Knowing that my skin is well taken care of makes a big difference."
             fullname="Henrik Jensen"

@@ -12,11 +12,11 @@ const Products: FC<{ products: Product[] }> = ({ products }) => {
         Products
       </h2>
       <div className="hidden lg:grid lg:grid-cols-2 lg:grid-rows-2 lg:gap-10 xl:gap-20">
-          {products.map(({ id, title, handle, presentation, priceRange: { maxVariantPrice: { amount, currencyCode } } }) => (
+          {products.map(({ id, title, handle, presentation, presentation_title, presentation_description, priceRange: { maxVariantPrice: { amount, currencyCode } } }) => (
               <div key={id}>
                   <Card
-                      title={title}
-                      description="It's designed to effortlessly clean your face"
+                      title={presentation_title?.value ?? title}
+                      description={presentation_description?.value ?? ''}
                       price={`${currencyCode} ${amount}`}
                       src={presentation?.value ?? ''}
                       alt={title}
@@ -26,7 +26,7 @@ const Products: FC<{ products: Product[] }> = ({ products }) => {
           ))}
       </div>
       <div className="lg:hidden">
-        <MobilePresentation />
+        <MobilePresentation products={products} />
       </div>
     </section>
   );

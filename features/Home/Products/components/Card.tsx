@@ -15,7 +15,7 @@ const Card: FC<CardProps> = ({ title, description, price, src, alt, url = '#' })
     <Link href={url} className="">
       <div className="group cursor-pointer">
         <div className="relative mb-6 lg:mb-0">
-          <Image src={src} alt={alt} className="h-full w-full" width={480} height={540} />
+          <Image unoptimized src={src} alt={alt} className="h-full w-full" width={480} height={540} />
           <div className="absolute bottom-0 flex w-full justify-between px-4 pb-4 lg:px-5 lg:pb-6">
             <div>
               <p className="font-medium leading-6 text-neutral-100 xl:text-lg xl:leading-6">
@@ -33,9 +33,7 @@ const Card: FC<CardProps> = ({ title, description, price, src, alt, url = '#' })
             />
           </div>
         </div>
-        <Link href={url} className="mb-6 block lg:hidden">
-          <SolidButton text="Discover" className="w-full justify-center" />
-        </Link>
+        <SolidButton text="Discover" className="w-full justify-center" />
       </div>
     </Link>
   );

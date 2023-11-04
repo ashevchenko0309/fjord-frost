@@ -34,15 +34,19 @@ const About = () => {
         <div className="relative md:h-full xl:h-full">
           <WhiteLogo className="absolute left-1/2 top-1/2 z-10 h-36 w-36 -translate-x-1/2 -translate-y-1/2" />
           <Image
+            unoptimized
             className="hidden h-full w-full object-cover lg:block"
-            src="https://cdn.shopify.com/s/files/1/0755/1906/6456/files/forest.png?v=1699016066"
-            height={500}
+            src="https://cdn.shopify.com/s/files/1/0755/1906/6456/files/forest_png.webp?v=1699093580"
+            height={320}
+            width={528}
             alt="forest background"
           />
           <Image
+            unoptimized
             className="h-full w-full object-cover md:h-full md:object-[0%_65%] lg:hidden"
-            src="https://cdn.shopify.com/s/files/1/0755/1906/6456/files/forest-mobile.png?v=1699016066"
-            height={500}
+            src="https://cdn.shopify.com/s/files/1/0755/1906/6456/files/forest-mobile_png.webp?v=1699093580"
+            width={375}
+            height={228}
             alt="forest background"
           />
         </div>
@@ -80,15 +84,19 @@ const About = () => {
         </div>
         <div className="relative">
           <Image
+            unoptimized
             className="hidden h-full w-full object-cover lg:block"
-            src="https://cdn.shopify.com/s/files/1/0755/1906/6456/files/plant.png?v=1699016066"
-            height={500}
+            src="https://cdn.shopify.com/s/files/1/0755/1906/6456/files/plant_png.webp?v=1699093579"
+            height={320}
+            width={528}
             alt="plant background"
           />
           <Image
+            unoptimized
             className="w-full object-cover md:h-full md:object-[80%_0%] lg:hidden"
-            src="https://cdn.shopify.com/s/files/1/0755/1906/6456/files/plant-mobile.png?v=1699016065"
-            height={500}
+            src="https://cdn.shopify.com/s/files/1/0755/1906/6456/files/plant-mobile_png.webp?v=1699093580"
+            width={375}
+            height={228}
             alt="plant background"
           />
         </div>
@@ -123,17 +131,19 @@ const About = () => {
         </div>
         <div className="relative">
           <Image
-            className="hidden w-full h-full object-cover lg:block"
+            className="hidden h-full w-full object-cover lg:block"
             unoptimized
-            src="https://cdn.shopify.com/s/files/1/0755/1906/6456/files/man-with-cap.png?v=1699016766"
-            height={500}
+            src="https://cdn.shopify.com/s/files/1/0755/1906/6456/files/man-with-cap_png.webp?v=1699093579"
+            height={320}
+            width={528}
             alt="man with a cap"
           />
           <Image
             className="w-full object-cover object-[0%_55%] md:h-full md:object-[50%_55%] lg:hidden"
             unoptimized
-            src="https://cdn.shopify.com/s/files/1/0755/1906/6456/files/man-with-cap-mobile.png?v=1699016065"
-            height={500}
+            src="https://cdn.shopify.com/s/files/1/0755/1906/6456/files/man-with-cap-mobile_png.webp?v=1699093579"
+            width={375}
+            height={228}
             alt="man with a cap"
           />
         </div>

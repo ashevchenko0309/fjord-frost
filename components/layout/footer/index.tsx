@@ -16,16 +16,16 @@ const Footer = () => {
         <nav className="mb-14 xl:mb-16">
           <ul className="space-y-3 text-center md:flex md:justify-center md:items-center md:space-y-0 md:gap-8 md:text-lg">
             <li className="font-medium leading-6 text-neutral-80">
-              <Link href="#">About</Link>
+              <Link href="/#about">About</Link>
             </li>
             <li className="font-medium leading-6 text-neutral-80">
-              <Link href="#">Features</Link>
+              <Link href="/#futures">Features</Link>
             </li>
             <li className="font-medium leading-6 text-neutral-80">
-              <Link href="#">Products</Link>
+              <Link href="/#products">Products</Link>
             </li>
             <li className="font-medium leading-6 text-neutral-80">
-              <Link href="#">Skin care</Link>
+              <Link href="/#skin-care">Skin care</Link>
             </li>
           </ul>
         </nav>
@@ -34,10 +34,10 @@ const Footer = () => {
           <div className="mb-4 md:mb-6 lg:mb-0">
             <ul className="flex items-center justify-between text-sm leading-5 md:flex md:justify-center md:gap-6 md:text-base">
               <li>
-                <Link href="#">Terms</Link>
+                <Link href="/return-and-general-store-policy">Terms</Link>
               </li>
               <li>
-                <Link href="#">Privacy</Link>
+                <Link href="/privacy-policy">Privacy</Link>
               </li>
               <li>
                 <Link href="#">Cookies</Link>
