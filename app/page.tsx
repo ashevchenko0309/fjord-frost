@@ -1,23 +1,25 @@
-import About from "../features/Home/About";
-import Futures from "../features/Home/Futures";
-import Products from "../features/Home/Products";
-import CallToAction from "../features/Home/CallToAction";
-import Steps from "../features/Home/Steps";
-import Reviews from "../features/Home/Reviews";
-import Banner from "../features/Home/Banner";
-import {getProducts} from "../lib/shopify";
+import About from '../features/Home/About';
+import Futures from '../features/Home/Futures';
+import Products from '../features/Home/Products';
+import CallToAction from '../features/Home/CallToAction';
+import Steps from '../features/Home/Steps';
+import Reviews from '../features/Home/Reviews';
+import Banner from '../features/Home/Banner';
+import { getProducts } from '../lib/shopify';
 
 export const runtime = 'edge';
 
 export const metadata = {
-  description: 'High-performance ecommerce store built with Next.js, Vercel, and Shopify.',
+  title: 'Premium Skin Care Products | Frost-Fjord: Transform Your Skin',
+  description:
+    'Discover a range of luxurious skin care products at Frost-Fjord. Enhance your beauty routine with our premium creams, serums, and treatments. Transform your skin today!',
   openGraph: {
     type: 'website'
   }
 };
 
 export default async function HomePage() {
-    const products = await getProducts({});
+  const products = await getProducts({});
 
   return (
     <>
