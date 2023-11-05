@@ -1,4 +1,3 @@
-import { SolidButton } from '../../../components/uiKit/Button/Button';
 import Accordion from './components/Accordion';
 import {FC} from "react";
 import {Product} from "../../../lib/shopify/types";
@@ -14,11 +13,6 @@ const ProductDescription: FC<{ product: Product }> = ({ product }) => {
         </h1>
         <p className="mb-4 font-medium leading-6 text-neutral-100">{product.priceRange.maxVariantPrice.currencyCode} {product.priceRange.maxVariantPrice.amount}</p>
         <ProductActions product={product} />
-        {/*<div className="mb-6">*/}
-        {/*  <p className="mb-2 text-xs font-medium leading-4">Quantity</p>*/}
-        {/*  <Quantity />*/}
-        {/*</div>*/}
-        {/*<SolidButton text="Add to shopping bag" className="mb-6 w-full justify-center" />*/}
         <div className="mb-6">
           <p className="mb-4 text-sm font-medium leading-5">{product.volume?.value}</p>
           <p className="text-sm leading-5 lg:text-base">

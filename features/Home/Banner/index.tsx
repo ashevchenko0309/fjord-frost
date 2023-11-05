@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import {FC, useState} from 'react';
 import { Swiper, SwiperProps, SwiperSlide } from 'swiper/react';
 import { Controller, EffectFade } from 'swiper/modules';
 
@@ -9,8 +9,9 @@ import { SecondaryBannerItem } from './components/SecondaryBannerItem';
 import { MainBannerItem } from './components/MainBannerItem';
 import { LeftBannerArrow, RightBannerArrow } from '../../../components/icons/navigation';
 import { useSwiper } from 'swiper/swiper-react';
+import {Product} from "../../../lib/shopify/types";
 
-const Banner = () => {
+const Banner: FC<{ products: Product[] }> = ({ products }) => {
   const [controlledSwiper, setControlledSwiper] = useState<ReturnType<typeof useSwiper> | null>(
     null
   );
@@ -61,14 +62,17 @@ const Banner = () => {
               onSlideChange={onMainSlideChange}
               className="titles-slider"
             >
-              {MAIN_SLIDES.map(({ entry, title, button, description }, index) => (
+              {MAIN_SLIDES.map(({ entry, title, button, description, link, addToCartAction }, index) => (
                 <SwiperSlide key={entry}>
                   <MainBannerItem
                     entry={entry}
                     title={title}
                     button={button}
                     description={description}
+                    link={link}
                     index={index}
+                    addToCartAction={addToCartAction}
+                    products={products}
                   />
                 </SwiperSlide>
               ))}
@@ -98,7 +102,7 @@ const Banner = () => {
               }
             }}
           >
-            {SECONDARY_SLIDES[activeSlide]?.map(({ src, alt, priority, title }) => (
+            {SECONDARY_SLIDES[activeSlide]?.map(({ src, alt, priority, title, link }) => (
               <SwiperSlide key={`${activeSlide}_${alt}`}>
                 <Transition
                   appear={true}
@@ -110,7 +114,7 @@ const Banner = () => {
                   leaveFrom="opacity-100 translate-y-0"
                   leaveTo="opacity-0 translate-y-1"
                 >
-                  <SecondaryBannerItem src={src} alt={alt} priority={priority} title={title} />
+                  <SecondaryBannerItem src={src} alt={alt} priority={priority} title={title} link={link} />
                 </Transition>
               </SwiperSlide>
             ))}

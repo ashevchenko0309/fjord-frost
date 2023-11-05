@@ -42,7 +42,9 @@ export default async function Navbar() {
         </ul>
         <div className="hidden items-center gap-4 lg:flex">
           <Cart />
-          <SolidButton text="Discover" size="small" />
+          <Link href="/#products">
+            <SolidButton text="Discover" size="small" />
+          </Link>
         </div>
       </div>
       <div className="block flex-none lg:hidden">

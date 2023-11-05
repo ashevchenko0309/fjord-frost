@@ -1,5 +1,4 @@
 "use client"
-import {SolidButton} from "../../../../components/uiKit/Button/Button";
 import {AddToCart} from "../../../../components/cart/add-to-cart";
 import {FC, KeyboardEvent, useState} from "react";
 import {Product} from "../../../../lib/shopify/types";

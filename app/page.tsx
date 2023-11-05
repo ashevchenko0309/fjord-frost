@@ -23,12 +23,12 @@ export default async function HomePage() {
 
   return (
     <>
-      <Banner />
+      <Banner products={products} />
       <About />
       <Futures />
       <Products products={products} />
       <CallToAction />
-      <Steps />
+      <Steps products={products} />
       <Reviews />
     </>
   );

@@ -1,9 +1,6 @@
 'use client';
 
-import { PlusIcon } from '@heroicons/react/24/outline';
-import clsx from 'clsx';
 import { addItem } from 'components/cart/actions';
-import LoadingDots from 'components/loading-dots';
 import { ProductVariant } from 'lib/shopify/types';
 import { useSearchParams } from 'next/navigation';
 import {
@@ -15,14 +12,12 @@ import { SolidButton } from '../uiKit/Button/Button';
 
 function SubmitButton({
   availableForSale,
-  selectedVariantId
+  selectedVariantId,
 }: {
   availableForSale: boolean;
   selectedVariantId: string | undefined;
 }) {
   const { pending } = useFormStatus();
-  const buttonClasses =
-    'relative flex w-full items-center justify-center rounded-full bg-blue-600 p-4 tracking-wide text-white';
 
   if (!availableForSale) {
     return <SolidButton text="Out Of Stock" disabled className="mb-6 w-full justify-center" />;
@@ -41,17 +36,17 @@ function SubmitButton({
   }
 
   return (
-      <SolidButton
-          aria-label="Add to cart"
-          aria-disabled={pending}
-          text="Add to card"
-          disabled={pending}
-          className="mb-6 w-full justify-center"
-          onClick={(e: React.FormEvent<HTMLButtonElement>) => {
-            if (pending) e.preventDefault();
-          }}
-      />
-  )
+    <SolidButton
+      aria-label="Add to cart"
+      aria-disabled={pending}
+      text="Add to card"
+      disabled={pending}
+      className="mb-6 w-full justify-center"
+      onClick={(e: React.FormEvent<HTMLButtonElement>) => {
+        if (pending) e.preventDefault();
+      }}
+    />
+  );
 }
 
 export function AddToCart({
@@ -72,7 +67,7 @@ export function AddToCart({
     )
   );
   const selectedVariantId = variant?.id || defaultVariantId;
-  const actionWithVariant = formAction.bind(null, { selectedVariantId, quantity });
+  const actionWithVariant = formAction.bind(null, [{ selectedVariantId, quantity }]);
 
   return (
     <form action={actionWithVariant}>

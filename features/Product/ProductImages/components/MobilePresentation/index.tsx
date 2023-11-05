@@ -14,7 +14,7 @@ const MobilePresentation: FC<{ images: { src: string; altText: string }[] }> = (
 
   return (
     <>
-      <div className="relative">
+      <div className="relative w-full">
         <Swiper
           loop
           slidesPerView={1}
@@ -25,7 +25,9 @@ const MobilePresentation: FC<{ images: { src: string; altText: string }[] }> = (
         >
           {images.map(({ src, altText }) => (
             <SwiperSlide key={src}>
-              <Image unoptimized className="w-full" src={src} alt={altText} height={720} width={670} />
+              <div className="w-full h-full xl:w-[624px] xl:h-[670px]">
+                <Image unoptimized className="w-full object-contain object-center xl:object-none" src={src} alt={altText} height={670} width={624} />
+              </div>
             </SwiperSlide>
           ))}
         </Swiper>
