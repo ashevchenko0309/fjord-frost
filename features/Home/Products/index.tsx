@@ -7,7 +7,7 @@ const MobilePresentation = dynamic(() => import('./components/MobilePresentation
 
 const Products: FC<{ products: Product[] }> = ({ products }) => {
   return (
-    <section id="products" className="px-4 py-16 lg:pb-36 lg:pt-14 lg:px-20 xl:py-40">
+    <section id="products" className="px-4 py-16 lg:pb-36 lg:pt-14 lg:px-20 xl:py-40 xl:px-52">
       <h2 className="mb-8 text-center font-header text-4xl font-semibold leading-10 md:mb-12 md:text-5xl lg:mb-14">
         Products
       </h2>
