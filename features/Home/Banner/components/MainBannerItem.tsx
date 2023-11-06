@@ -3,6 +3,7 @@ import { MAIN_SLIDES } from '../constants';
 import { SolidButton } from '../../../../components/uiKit/Button/Button';
 import Link from 'next/link';
 import { Product } from '../../../../lib/shopify/types';
+import clsx from "clsx";
 
 export interface MainSliderItemProps {
   entry: string;
@@ -13,6 +14,7 @@ export interface MainSliderItemProps {
   addToCartAction?: (products: Product[]) => ReactNode;
   index: number;
   products: Product[];
+  activeSlide: number;
 }
 
 export const MainBannerItem: FC<MainSliderItemProps> = ({
@@ -23,7 +25,8 @@ export const MainBannerItem: FC<MainSliderItemProps> = ({
   link,
   addToCartAction,
   index,
-  products
+  products,
+    activeSlide
 }) => {
   return (
     <div className="cursor-pointer overflow-hidden bg-white md:py-20 xl:relative xl:bg-transparent xl:py-0 xl:pb-1">
@@ -32,33 +35,19 @@ export const MainBannerItem: FC<MainSliderItemProps> = ({
         <h1 className="mb-8 font-header text-5xl font-semibold leading-[44px] xl:mb-16 xl:whitespace-nowrap xl:text-[52px] xl:leading-[56px]">
           {title}
         </h1>
-        <ul className="flex h-1 items-center gap-5 xl:hidden">
-          <li className="relative">
-            <p
-              className={
-                index === 0 ? '-mt-px h-1 w-5 bg-primary-main' : 'h-0.5 w-2.5 bg-primary-border'
-              }
-            />
-          </li>
-          <li className="relative">
-            <p
-              className={
-                index > 0 && index < MAIN_SLIDES.length - 1
-                  ? '-mt-px h-1 w-5 bg-primary-main'
-                  : 'h-0.5 w-2.5 bg-primary-border'
-              }
-            />
-          </li>
-          <li className="relative">
-            <p
-              className={
-                index === MAIN_SLIDES.length - 1
-                  ? '-mt-px h-1 w-5 bg-primary-main'
-                  : 'h-0.5 w-2.5 bg-primary-border'
-              }
-            />
-          </li>
-        </ul>
+        <div className="flex h-1 items-center gap-5 xl:hidden overflow-hidden w-[75px] relative">
+          {MAIN_SLIDES.map(({ entry }, index) => {
+            return (
+                <div key={entry} className="absolute transition-all w-5 flex justify-center"  style={{ left: activeSlide > 1 ? `${(index - (activeSlide - 1)) * 30}px` : index * 30 }}>
+                  <div className={clsx(
+                      activeSlide === index
+                          ? '-mt-px h-1 w-5 bg-primary-main'
+                          : 'h-0.5 w-2.5 bg-primary-border',
+                  )}></div>
+                </div>
+            )
+          })}
+        </div>
         <p className="py-4 text-sm leading-5 text-neutral-50 xl:max-w-[200px]">{description}</p>
         {addToCartAction ? (
           addToCartAction(products)

@@ -113,30 +113,27 @@ const MobilePresentation = () => {
           </div>
         </SwiperSlide>
       </Swiper>
-      <ul className="flex h-1 items-center justify-center gap-8">
-        <li className="relative">
-          <span
+      <ul className="flex h-1 items-center justify-center gap-3">
+        <li className={clsx(activeSlide === 0 ? '' : 'self-baseline', 'relative')}>
+          <div
             className={clsx(
-              'absolute w-5',
-              activeSlide === 0 ? '-mt-px h-1 bg-primary-main' : 'h-0.5 bg-primary-border'
+              activeSlide === 0 ? '-mt-px w-5 h-1 bg-primary-main' : 'h-0.5 w-2.5 bg-primary-border'
             )}
           />
         </li>
-        <li className="relative">
-          <span
+        <li className={clsx(activeSlide > 0 && progress < 0.9 ? '' : 'self-baseline', 'relative')}>
+          <div
             className={clsx(
-              'absolute w-5',
               activeSlide > 0 && progress < 0.9
-                ? '-mt-px h-1 bg-primary-main'
-                : 'h-0.5 bg-primary-border'
+                ? '-mt-px w-5 h-1 bg-primary-main'
+                : 'h-0.5 w-2.5 bg-primary-border'
             )}
           />
         </li>
-        <li className="relative">
-          <span
+        <li className={clsx(progress >= 0.9 ? '' : 'self-baseline', 'relative')}>
+          <div
             className={clsx(
-              'absolute w-5',
-              progress >= 0.9 ? '-mt-px h-1 bg-primary-main' : 'h-0.5 bg-primary-border'
+              progress >= 0.9 ? '-mt-px w-5 h-1 bg-primary-main' : 'h-0.5 w-2.5 bg-primary-border'
             )}
           />
         </li>
