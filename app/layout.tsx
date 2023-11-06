@@ -54,7 +54,7 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
       <body className="bg-[#F7F9FB] font-body text-neutral-80 overflow-x-hidden max-w-[1440px] mx-auto">
         <Navbar />
         <Suspense>
-          <main className="overflow-hidden">{children}</main>
+          <main className="overflow-hidden bg-neutral-10">{children}</main>
         </Suspense>
         <Footer />
       </body>
