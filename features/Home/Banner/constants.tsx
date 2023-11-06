@@ -2,7 +2,7 @@ import { BannerItemProps } from './interfaces';
 import {MainSliderItemProps} from "./components/MainBannerItem";
 import AddSetToCart from "./components/AddSetToCart";
 
-export const MAIN_SLIDES: Omit<MainSliderItemProps, "index" | "products">[] = [
+export const MAIN_SLIDES: Omit<MainSliderItemProps, "index" | "products" | "activeSlide">[] = [
   {
     entry: 'Based in Copenhagen',
     title: (
