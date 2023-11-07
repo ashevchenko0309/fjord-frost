@@ -35,7 +35,7 @@ const MenuList: FC<PropsWithChildren & { close: () => void }> = ({ close, childr
           href="/#skin-care"
           className="px-4 py-3 font-medium text-neutral-80"
         >
-          Skin care
+          Skin routine
         </Popover.Button>
       </div>
       <div className="flex flex-col border-t-2 border-neutral-30 pl-3 pr-4 pt-6">

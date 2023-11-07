@@ -36,7 +36,7 @@ export default async function Navbar() {
           </li>
           <li>
             <Link href="/#skin-care" className="px-3 py-1.5">
-              Skin care
+              Skin routine
             </Link>
           </li>
         </ul>
