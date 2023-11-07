@@ -1,5 +1,5 @@
 'use client';
-import {FC, useState} from 'react';
+import { FC, useState } from 'react';
 import { Swiper, SwiperProps, SwiperSlide } from 'swiper/react';
 import { Controller, EffectFade } from 'swiper/modules';
 
@@ -9,8 +9,8 @@ import { SecondaryBannerItem } from './components/SecondaryBannerItem';
 import { MainBannerItem } from './components/MainBannerItem';
 import { LeftBannerArrow, RightBannerArrow } from '../../../components/icons/navigation';
 import { useSwiper } from 'swiper/swiper-react';
-import {Product} from "../../../lib/shopify/types";
-import clsx from "clsx";
+import { Product } from '../../../lib/shopify/types';
+import clsx from 'clsx';
 
 const Banner: FC<{ products: Product[] }> = ({ products }) => {
   const [controlledSwiper, setControlledSwiper] = useState<ReturnType<typeof useSwiper> | null>(
@@ -25,16 +25,22 @@ const Banner: FC<{ products: Product[] }> = ({ products }) => {
     <section>
       <div className="relative mb-8 bg-white pt-11 md:grid md:grid-cols-[40%_60%] md:pt-0 xl:grid-cols-[30%_70%]">
         <div className="relative xl:flex xl:items-center xl:pl-24">
-          <div className="hidden items-center gap-8 xl:absolute xl:top-[38%] xl:flex xl:flex-col w-[60px] h-[75px] overflow-hidden">
+          <div className="hidden h-[75px] w-[60px] items-center gap-8 overflow-hidden xl:absolute xl:top-[38%] xl:flex xl:flex-col">
             {MAIN_SLIDES.map(({ entry }, index) => {
               return (
-                  <div key={entry} className={clsx(
-                      activeSlide === index
-                          ? '-mt-px h-1 w-5 bg-primary-main'
-                          : 'h-0.5 w-2.5 bg-primary-border',
-                      'absolute transition-all'
-                  )} style={{ top: activeSlide > 1 ? `${(index - (activeSlide - 1)) * 25}px` : index * 25 }} />
-              )
+                <div
+                  key={entry}
+                  className={clsx(
+                    activeSlide === index
+                      ? '-mt-px h-1 w-5 bg-primary-main'
+                      : 'h-0.5 w-2.5 bg-primary-border',
+                    'absolute transition-all'
+                  )}
+                  style={{
+                    top: activeSlide > 1 ? `${(index - (activeSlide - 1)) * 25}px` : index * 25
+                  }}
+                />
+              );
             })}
           </div>
           <div className="w-full xl:absolute xl:right-[-186px] xl:z-20">
@@ -46,21 +52,23 @@ const Banner: FC<{ products: Product[] }> = ({ products }) => {
               onSlideChange={onMainSlideChange}
               className="titles-slider"
             >
-              {MAIN_SLIDES.map(({ entry, title, button, description, link, addToCartAction }, index) => (
-                <SwiperSlide key={entry}>
-                  <MainBannerItem
+              {MAIN_SLIDES.map(
+                ({ entry, title, button, description, link, addToCartAction }, index) => (
+                  <SwiperSlide key={entry}>
+                    <MainBannerItem
                       activeSlide={activeSlide}
-                    entry={entry}
-                    title={title}
-                    button={button}
-                    description={description}
-                    link={link}
-                    index={index}
-                    addToCartAction={addToCartAction}
-                    products={products}
-                  />
-                </SwiperSlide>
-              ))}
+                      entry={entry}
+                      title={title}
+                      button={button}
+                      description={description}
+                      link={link}
+                      index={index}
+                      addToCartAction={addToCartAction}
+                      products={products}
+                    />
+                  </SwiperSlide>
+                )
+              )}
             </Swiper>
           </div>
         </div>
@@ -99,7 +107,13 @@ const Banner: FC<{ products: Product[] }> = ({ products }) => {
                   leaveFrom="opacity-100 translate-y-0"
                   leaveTo="opacity-0 translate-y-1"
                 >
-                  <SecondaryBannerItem src={src} alt={alt} priority={priority} title={title} link={link} />
+                  <SecondaryBannerItem
+                    src={src}
+                    alt={alt}
+                    priority={priority}
+                    title={title}
+                    link={link}
+                  />
                 </Transition>
               </SwiperSlide>
             ))}

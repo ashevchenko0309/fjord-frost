@@ -42,7 +42,7 @@ const MobilePresentation = () => {
         </SwiperSlide>
         <SwiperSlide>
           <Review
-            src="https://cdn.shopify.com/s/files/1/0755/1906/6456/files/stefan-muller_png.webp?v=1699094418"
+            src="https://cdn.shopify.com/s/files/1/0755/1906/6456/files/unsplash_rxwumN1CEGs.png?v=1699366575"
             alt="Stefan Müller review"
             text="Its noticeable difference in how my skin feels and looks. It's like a burst of energy for my face, and I'm loving the youthful glow it gives me"
             fullname="Stefan Müller"

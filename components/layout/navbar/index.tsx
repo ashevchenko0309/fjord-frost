@@ -8,7 +8,7 @@ const { SITE_NAME } = process.env;
 
 export default async function Navbar() {
   return (
-    <nav className="relative flex items-center justify-between border-b border-primary-surface bg-neutral-10 p-4 lg:px-8">
+    <nav className="relative sticky top-0 z-30 flex items-center justify-between border-b border-primary-surface bg-neutral-10 p-4 lg:px-8">
       <div className="flex w-full items-center justify-between">
         <div className="flex">
           <Link href="/" className="flex w-full items-center justify-start gap-2">
@@ -26,7 +26,7 @@ export default async function Navbar() {
           </li>
           <li>
             <Link href="/#futures" className="px-3 py-1.5">
-              Futures
+              Features
             </Link>
           </li>
           <li>
@@ -48,7 +48,9 @@ export default async function Navbar() {
         </div>
       </div>
       <div className="block flex-none lg:hidden">
-        <MobileMenu><Cart /></MobileMenu>
+        <MobileMenu>
+          <Cart />
+        </MobileMenu>
       </div>
     </nav>
   );

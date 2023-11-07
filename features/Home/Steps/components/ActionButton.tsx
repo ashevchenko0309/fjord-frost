@@ -11,7 +11,7 @@ const ActionButton = () => {
     <SolidButton
       aria-label="Try daily care set"
       aria-disabled={pending}
-      text="Try daily care set"
+      text="Great deal on daily care set"
       disabled={pending}
       className="w-full justify-center lg:mx-auto lg:w-auto"
       onClick={(e: React.FormEvent<HTMLButtonElement>) => {
