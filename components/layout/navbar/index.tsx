@@ -8,7 +8,7 @@ const { SITE_NAME } = process.env;
 
 export default async function Navbar() {
   return (
-    <nav className="relative sticky top-0 z-30 flex items-center justify-between border-b border-primary-surface bg-neutral-10 p-4 lg:px-8">
+    <nav className="sticky top-0 z-30 flex items-center justify-between border-b border-primary-surface bg-neutral-10 p-4 lg:px-8">
       <div className="flex w-full items-center justify-between">
         <div className="flex">
           <Link href="/" className="flex w-full items-center justify-start gap-2">
