@@ -374,7 +374,7 @@ export async function getPages(): Promise<Page[]> {
 export async function getProduct(handle: string): Promise<Product | undefined> {
   const res = await shopifyFetch<ShopifyProductOperation>({
     query: getProductQuery,
-    tags: [TAGS.products],
+    tags: [TAGS.product],
     variables: {
       handle
     }
@@ -445,6 +445,7 @@ export async function revalidate(req: NextRequest): Promise<NextResponse> {
 
   if (isProductUpdate) {
     console.error('products update');
+    revalidateTag(TAGS.product)
     revalidateTag(TAGS.products);
   }
 
