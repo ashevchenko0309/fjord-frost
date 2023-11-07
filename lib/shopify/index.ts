@@ -434,6 +434,7 @@ export async function revalidate(req: NextRequest): Promise<NextResponse> {
   }
 
   if (!isCollectionUpdate && !isProductUpdate) {
+    console.error('Different topic');
     // We don't need to revalidate anything for any other topics.
     return NextResponse.json({ status: 200 });
   }
@@ -443,6 +444,7 @@ export async function revalidate(req: NextRequest): Promise<NextResponse> {
   }
 
   if (isProductUpdate) {
+    console.error('products update');
     revalidateTag(TAGS.products);
   }
 
