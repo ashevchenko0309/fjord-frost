@@ -44,32 +44,32 @@ const Banner: FC<{ products: Product[] }> = ({ products }) => {
             })}
           </div>
           <div className="w-full xl:absolute xl:right-[-186px] xl:z-20">
-            <Swiper
-              loop={true}
-              effect="fade"
-              modules={[EffectFade, Controller]}
-              onSwiper={(swiper) => setControlledSwiper(swiper)}
-              onSlideChange={onMainSlideChange}
-              className="titles-slider"
-            >
-              {MAIN_SLIDES.map(
-                ({ entry, title, button, description, link, addToCartAction }, index) => (
-                  <SwiperSlide key={entry}>
-                    <MainBannerItem
-                      activeSlide={activeSlide}
-                      entry={entry}
-                      title={title}
-                      button={button}
-                      description={description}
-                      link={link}
-                      index={index}
-                      addToCartAction={addToCartAction}
-                      products={products}
-                    />
-                  </SwiperSlide>
-                )
-              )}
-            </Swiper>
+            {/*<Swiper*/}
+            {/*  loop={true}*/}
+            {/*  effect="fade"*/}
+            {/*  modules={[EffectFade, Controller]}*/}
+            {/*  onSwiper={(swiper) => setControlledSwiper(swiper)}*/}
+            {/*  onSlideChange={onMainSlideChange}*/}
+            {/*  className="titles-slider"*/}
+            {/*>*/}
+            {/*  {MAIN_SLIDES.map(*/}
+            {/*    ({ entry, title, button, description, link, addToCartAction }, index) => (*/}
+            {/*      <SwiperSlide key={entry}>*/}
+            {/*        <MainBannerItem*/}
+            {/*          activeSlide={activeSlide}*/}
+            {/*          entry={entry}*/}
+            {/*          title={title}*/}
+            {/*          button={button}*/}
+            {/*          description={description}*/}
+            {/*          link={link}*/}
+            {/*          index={index}*/}
+            {/*          addToCartAction={addToCartAction}*/}
+            {/*          products={products}*/}
+            {/*        />*/}
+            {/*      </SwiperSlide>*/}
+            {/*    )*/}
+            {/*  )}*/}
+            {/*</Swiper>*/}
           </div>
         </div>
         <div className="banner-gradient relative z-10 pb-6 pt-8 xl:pl-48 xl:pt-20">
