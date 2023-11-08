@@ -4,14 +4,14 @@ import {experimental_useFormState as useFormState, experimental_useFormStatus as
 import {addItem} from "../../../../components/cart/actions";
 import {SolidButton} from "../../../../components/uiKit/Button/Button";
 
-const ActionButton = () => {
+const ActionButton = ({ text }: { text?: string }) => {
     const { pending } = useFormStatus();
 
     return (
         <SolidButton
-            aria-label="Try daily care set"
+            aria-label={text ?? "Try daily care set"}
             aria-disabled={pending}
-            text="Try daily care set"
+            text={text ?? "Try daily care set"}
             disabled={pending}
             className="w-full justify-start lg:mr-auto lg:w-auto"
             onClick={(e: React.FormEvent<HTMLButtonElement>) => {
@@ -21,7 +21,7 @@ const ActionButton = () => {
     );
 }
 
-const AddSetToCart: FC<{ products: Product[] }> = ({ products }) => {
+const AddSetToCart: FC<{ products: Product[]; text?: string }> = ({ products, text }) => {
     const [message, formAction] = useFormState(addItem, null);
     const actionWithVariant = formAction.bind(
         null,
@@ -33,7 +33,7 @@ const AddSetToCart: FC<{ products: Product[] }> = ({ products }) => {
 
     return (
         <form action={actionWithVariant}>
-            <ActionButton />
+            <ActionButton text={text} />
             <p aria-live="polite" className="sr-only" role="status">
                 {message}
             </p>

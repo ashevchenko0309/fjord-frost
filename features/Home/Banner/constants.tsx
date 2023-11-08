@@ -15,7 +15,7 @@ export const MAIN_SLIDES: Omit<MainSliderItemProps, "index" | "products" | "acti
     description: <>Only traditional Nordic ingredients</>,
     button: 'Try daily care set deal',
     addToCartAction: (products) => {
-      return <AddSetToCart products={products} />
+      return <AddSetToCart products={products} text="Try daily care set deal" />
     }
   },
   {
