@@ -26,7 +26,7 @@ const MobilePresentation = () => {
       >
         <SwiperSlide>
           <div className="pb-8">
-            <Link href="/product/oil-free-hydrating-face-gel">
+            <Link href="/product/oil-free-hydrating-gel">
               <div className="relative mb-4">
                 <Image
                   src="https://cdn.shopify.com/s/files/1/0755/1906/6456/files/face-gel_png.webp?v=1699100906"
@@ -41,14 +41,14 @@ const MobilePresentation = () => {
                 </p>
               </div>
             </Link>
-            <Link href="/product/oil-free-hydrating-face-gel">
+            <Link href="/product/oil-free-hydrating-gel">
               <OutlineButton text="Discover" className="mx-auto" />
             </Link>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="pb-8">
-            <Link href="/product/antioxidant-face-gel-booster">
+            <Link href="/product/antioxidant-ginkgo-gel-booster">
               <div className="relative mb-4">
                 <Image
                   src="https://cdn.shopify.com/s/files/1/0755/1906/6456/files/antioxidant_png_bfc6ed30-5ed9-4fbd-96a8-182873b08b11.webp?v=1699100906"
@@ -63,14 +63,14 @@ const MobilePresentation = () => {
                 </p>
               </div>
             </Link>
-            <Link href="/product/antioxidant-face-gel-booster">
+            <Link href="/product/antioxidant-ginkgo-gel-booster">
               <OutlineButton text="Discover" className="mx-auto" />
             </Link>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="pb-8">
-            <Link href="/product/anti-age-face-day-cream">
+            <Link href="/product/anti-age-day-cream">
               <div className="relative mb-4">
                 <Image
                   src="https://cdn.shopify.com/s/files/1/0755/1906/6456/files/anti-age-face-day-cream_png_b71377bf-1485-42a3-8af9-3327cc29abb1.webp?v=1699100907"
@@ -85,14 +85,14 @@ const MobilePresentation = () => {
                 </p>
               </div>
             </Link>
-            <Link href="/product/anti-age-face-day-cream">
+            <Link href="/product/anti-age-day-cream">
               <OutlineButton text="Discover" className="mx-auto" />
             </Link>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="pb-8">
-            <Link href="/product/facial-cleanser">
+            <Link href="/product/purifying-mousse">
               <div className="relative mb-4">
                 <Image
                   src="https://cdn.shopify.com/s/files/1/0755/1906/6456/files/facial-cleanser_png.webp?v=1699100906"
@@ -107,7 +107,7 @@ const MobilePresentation = () => {
                 </p>
               </div>
             </Link>
-            <Link href="/product/facial-cleanser">
+            <Link href="/product/purifying-mousse">
               <OutlineButton text="Discover" className="mx-auto" />
             </Link>
           </div>
