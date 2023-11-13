@@ -26,7 +26,7 @@ const MobilePresentation: FC<{ images: { src: string; altText: string }[] }> = (
           {images.map(({ src, altText }) => (
             <SwiperSlide key={src}>
               <div className="w-full h-full xl:w-[624px] xl:h-[670px]">
-                <Image unoptimized className="w-full object-contain object-center xl:object-none" src={src} alt={altText} height={670} width={624} />
+                <Image unoptimized className="w-full h-full object-cover object-center" src={src} alt={altText} height={670} width={624} />
               </div>
             </SwiperSlide>
           ))}
