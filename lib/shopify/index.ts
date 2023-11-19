@@ -19,7 +19,7 @@ import {
 import { getMenuQuery } from './queries/menu';
 import { getPageQuery, getPagesQuery } from './queries/page';
 import {
-  getProductQuery,
+  getProductQuery, getProductQueryById,
   // getProductRecommendationsQuery,
   getProductsQuery
 } from './queries/product';
@@ -43,7 +43,7 @@ import {
   ShopifyPageOperation,
   ShopifyPagesOperation,
   ShopifyProduct,
-  ShopifyProductOperation,
+  ShopifyProductOperation, ShopifyProductOperationById,
   // ShopifyProductRecommendationsOperation,
   ShopifyProductsOperation,
   ShopifyRemoveFromCartOperation,
@@ -259,7 +259,7 @@ export async function getCart(cartId: string): Promise<Cart | undefined> {
     query: getCartQuery,
     variables: { cartId },
     tags: [TAGS.cart],
-    cache: 'no-store'
+    cache: 'no-cache'
   });
 
   // Old carts becomes `null` when you checkout.
@@ -384,6 +384,19 @@ export async function getProduct(handle: string): Promise<Product | undefined> {
   return reshapeProduct(res.body.data.product, false);
 }
 
+export async function getProductById(id: string): Promise<Product | undefined> {
+  const res = await shopifyFetch<ShopifyProductOperationById>({
+    query: getProductQueryById,
+    tags: [TAGS.product],
+    cache: 'no-cache',
+    variables: {
+      id
+    }
+  });
+
+  return reshapeProduct(res.body.data.product, false);
+}
+
 // export async function getProductRecommendations(productId: string): Promise<Product[]> {
 //   const res = await shopifyFetch<ShopifyProductRecommendationsOperation>({
 //     query: getProductRecommendationsQuery,
@@ -412,7 +425,8 @@ export async function getProducts({
       query,
       reverse,
       sortKey
-    }
+    },
+    cache: 'no-cache'
   });
 
   return reshapeProducts(removeEdgesAndNodes(res.body.data.products));

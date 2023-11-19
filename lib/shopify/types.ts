@@ -26,6 +26,7 @@ export type CartItem = {
       value: string;
     }[];
     product: Product;
+    bundled?: Product[];
   };
 };
 
@@ -117,30 +118,37 @@ export type ShopifyProduct = {
   descriptionHtml: string;
   options: ProductOption[];
   presentation_title?: {
-    value: string
-  }
+    value: string;
+  };
   presentation_description?: {
-    value: string
-  }
+    value: string;
+  };
   volume?: {
-    value: string
+    value: string;
   };
   ingredients?: {
-    value: string
+    value: string;
   };
   aroma?: {
-    value: string
+    value: string;
   };
   benefits?: {
-    value: string
+    value: string;
   };
   certificates?: {
-    value: string
+    value: string;
   };
   presentation?: {
-    value: string
+    value: string;
+  };
+  bundledProducts?: {
+    value: string;
   };
   priceRange: {
+    maxVariantPrice: Money;
+    minVariantPrice: Money;
+  };
+  compareAtPriceRange: {
     maxVariantPrice: Money;
     minVariantPrice: Money;
   };
@@ -268,6 +276,13 @@ export type ShopifyProductOperation = {
   };
 };
 
+export type ShopifyProductOperationById = {
+  data: { product: ShopifyProduct };
+  variables: {
+    id: string;
+  };
+};
+
 export type ShopifyProductRecommendationsOperation = {
   data: {
     productRecommendations: ShopifyProduct[];
@@ -278,12 +293,12 @@ export type ShopifyProductRecommendationsOperation = {
 };
 
 export type ShopifyProductsOperation = {
-  data: {
-    products: Connection<ShopifyProduct>;
-  };
-  variables: {
-    query?: string;
-    reverse?: boolean;
-    sortKey?: string;
-  };
+    data: {
+        products: Connection<ShopifyProduct>;
+    };
+    variables: {
+        query?: string;
+        reverse?: boolean;
+        sortKey?: string;
+    };
 };

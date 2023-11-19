@@ -12,7 +12,7 @@ import { useSwiper } from 'swiper/swiper-react';
 import { Product } from '../../../lib/shopify/types';
 import clsx from 'clsx';
 
-const Banner: FC<{ products: Product[] }> = ({ products }) => {
+const Banner: FC<{ products: Product[]; bundledProduct: Product[] }> = ({ products, bundledProduct }) => {
   const [controlledSwiper, setControlledSwiper] = useState<ReturnType<typeof useSwiper> | null>(
     null
   );
@@ -64,7 +64,7 @@ const Banner: FC<{ products: Product[] }> = ({ products }) => {
                       link={link}
                       index={index}
                       addToCartAction={addToCartAction}
-                      products={products}
+                      products={bundledProduct}
                     />
                   </SwiperSlide>
                 )

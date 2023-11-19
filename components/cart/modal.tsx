@@ -94,17 +94,14 @@ export default function CartModal({ cart }: { cart: Cart | undefined }) {
                       );
 
                       return (
-                        <li
-                          key={i}
-                          className="flex w-full flex-col border-b border-neutral-40"
-                        >
+                        <li key={i} className="flex w-full flex-col border-b border-neutral-40">
                           <div className="relative flex w-full flex-row justify-between px-1 py-4">
                             <div className="absolute z-40 -mt-2 ml-[55px]">
                               <DeleteItemButton item={item} />
                             </div>
                             <Link
-                              href={merchandiseUrl}
-                              onClick={closeCart}
+                              href={item.merchandise.bundled?.length === 0 ? merchandiseUrl : '#'}
+                              onClick={item.merchandise.bundled?.length === 0 ? closeCart : undefined}
                               className="z-30 flex flex-row space-x-4"
                             >
                               <div className="relative h-16 w-16 cursor-pointer overflow-hidden rounded-md border border-neutral-300 bg-neutral-40">
@@ -131,12 +128,20 @@ export default function CartModal({ cart }: { cart: Cart | undefined }) {
                                 ) : null}
                               </div>
                             </Link>
+
                             <div className="flex h-16 flex-col justify-between">
                               <Price
                                 className="flex justify-end space-y-2 text-right text-sm"
                                 amount={item.cost.totalAmount.amount}
                                 currencyCode={item.cost.totalAmount.currencyCode}
                               />
+                              {Boolean(Number(item.merchandise.product.compareAtPriceRange.maxVariantPrice.amount)) && (
+                                  <Price
+                                      className="flex justify-end space-y-2 text-right text-xs line-through"
+                                      amount={item.merchandise.product.compareAtPriceRange.maxVariantPrice.amount}
+                                      currencyCode={item.merchandise.product.compareAtPriceRange.maxVariantPrice.currencyCode}
+                                  />
+                              )}
                               <div className="ml-auto flex h-9 flex-row items-center rounded-full border border-neutral-40">
                                 <EditItemQuantityButton item={item} type="minus" />
                                 <p className="w-6 text-center">
@@ -146,12 +151,35 @@ export default function CartModal({ cart }: { cart: Cart | undefined }) {
                               </div>
                             </div>
                           </div>
+                          {item.merchandise.bundled && (
+                              <div className="pl-7 -mt-2 flex flex-col gap-1.5 mb-2">
+                                {item.merchandise.bundled?.map(({ id, title, featuredImage }) => {
+                                  return (
+                                      <div className="flex items-center gap-2" key={`bundled-product-${id}`}>
+                                        <div className="relative h-10 w-10 cursor-pointer overflow-hidden rounded-md border border-neutral-300 bg-neutral-40">
+                                          <Image
+                                              className="h-full w-full object-cover"
+                                              width={32}
+                                              height={32}
+                                              alt={featuredImage.altText || title}
+                                              src={featuredImage.url}
+                                          />
+                                        </div>
+                                        <div className="flex flex-1 flex-col text-sm">
+                                          <span className="leading-tight">{title}</span>
+                                        </div>
+                                      </div>
+                                  );
+                                })}
+                              </div>
+                          )}
+
                         </li>
                       );
                     })}
                   </ul>
                   <div className="py-4 text-sm text-neutral-100">
-                    <div className="mb-3 flex items-center justify-between border-b pb-1 border-neutral-40">
+                    <div className="mb-3 flex items-center justify-between border-b border-neutral-40 pb-1">
                       <p>Taxes</p>
                       <Price
                         className="text-right text-base text-neutral-100"
@@ -174,7 +202,7 @@ export default function CartModal({ cart }: { cart: Cart | undefined }) {
                   </div>
                   <a
                     href={cart.checkoutUrl}
-                    className="block w-full rounded-full p-3 text-center text-sm font-medium text-neutral-100 bg-primary-hover opacity-90 hover:opacity-100"
+                    className="block w-full rounded-full bg-primary-hover p-3 text-center text-sm font-medium text-neutral-100 opacity-90 hover:opacity-100"
                   >
                     Proceed to Checkout
                   </a>

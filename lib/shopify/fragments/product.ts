@@ -9,6 +9,17 @@ const productFragment = /* GraphQL */ `
     title
     description
     descriptionHtml
+    tags
+    compareAtPriceRange {
+      maxVariantPrice {
+        amount
+        currencyCode
+      }
+      minVariantPrice {
+        amount
+        currencyCode
+      }
+    }
     volume: metafield(namespace: "custom", key: "volume") {
       value
     }
@@ -16,6 +27,9 @@ const productFragment = /* GraphQL */ `
       value
     }
     presentation_description: metafield(namespace: "custom", key: "presentation_description") {
+      value
+    }
+    bundledProducts: metafield(namespace: "custom", key: "bundledproducts") {
       value
     }
     benefits: metafield(namespace: "custom", key: "benefits") {

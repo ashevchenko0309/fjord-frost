@@ -6,6 +6,7 @@ import Steps from '../features/Home/Steps';
 import Reviews from '../features/Home/Reviews';
 import Banner from '../features/Home/Banner';
 import { getProducts } from '../lib/shopify';
+import {BUNDLED_PRODUCTS_TAG} from "../constants/products";
 
 export const runtime = 'edge';
 
@@ -19,11 +20,13 @@ export const metadata = {
 };
 
 export default async function HomePage() {
-  const products = await getProducts({});
+  const rawProducts = await getProducts({});
+  const products = rawProducts.filter(({ tags }) => !tags.includes(BUNDLED_PRODUCTS_TAG))
+    const bundledProduct = rawProducts.filter(({ tags }) => tags.includes(BUNDLED_PRODUCTS_TAG))
 
   return (
     <>
-      <Banner products={products} />
+      <Banner products={products} bundledProduct={bundledProduct} />
       <About />
       <Futures />
       <Products products={products} />
