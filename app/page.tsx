@@ -22,7 +22,7 @@ export const metadata = {
 export default async function HomePage() {
   const rawProducts = await getProducts({});
   const products = rawProducts.filter(({ tags }) => !tags.includes(BUNDLED_PRODUCTS_TAG))
-    const bundledProduct = rawProducts.filter(({ tags }) => tags.includes(BUNDLED_PRODUCTS_TAG))
+  const bundledProduct = rawProducts.filter(({ tags }) => tags.includes(BUNDLED_PRODUCTS_TAG))
 
   return (
     <>
@@ -31,7 +31,7 @@ export default async function HomePage() {
       <Futures />
       <Products products={products} />
       <CallToAction />
-      <Steps products={products} />
+      <Steps products={products} bundledProduct={bundledProduct} />
       <Reviews />
     </>
   );

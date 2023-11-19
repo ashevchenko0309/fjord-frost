@@ -8,7 +8,7 @@ import {Product} from "../../../lib/shopify/types";
 const MobilePresentation = dynamic(() => import('./components/MobilePresentation'));
 const DesktopPresentation = dynamic(() => import('./components/DesktopPresentation'));
 
-const Steps: FC<{ products: Product[] }> = ({ products }) => {
+const Steps: FC<{ products: Product[]; bundledProduct: Product[] }> = ({ products, bundledProduct }) => {
   const [routine, setRoutine] = useState<ROUTINES>(ROUTINES.FULL);
   return (
     <section id="skin-care" className="bg-primary-surface px-4 py-8 lg:px-12 lg:pb-24 lg:pt-14 xl:py-28 xl:px-44">
@@ -37,10 +37,10 @@ const Steps: FC<{ products: Product[] }> = ({ products }) => {
         </button>
       </div>
       <div className="lg:hidden">
-        <MobilePresentation products={products} routine={routine} />
+        <MobilePresentation routine={routine} bundledProduct={bundledProduct} />
       </div>
       <div className="hidden lg:block">
-        <DesktopPresentation products={products} routine={routine} />
+        <DesktopPresentation products={bundledProduct} routine={routine} />
       </div>
     </section>
   );

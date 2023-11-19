@@ -5,11 +5,11 @@ import useAddSetToCart from '../hooks';
 import { Product } from '../../../../lib/shopify/types';
 import ActionButton from './ActionButton';
 
-const MobilePresentation: FC<{ routine: ROUTINES; products: Product[] }> = ({
+const MobilePresentation: FC<{ routine: ROUTINES; bundledProduct: Product[] }> = ({
   routine,
-  products
+  bundledProduct
 }) => {
-  const { message, actionWithVariant } = useAddSetToCart({ routine, products });
+  const { message, actionWithVariant } = useAddSetToCart({ routine, products: bundledProduct });
   if (routine === ROUTINES.FULL) {
     return (
       <div>
@@ -31,7 +31,7 @@ const MobilePresentation: FC<{ routine: ROUTINES; products: Product[] }> = ({
               src="https://cdn.shopify.com/s/files/1/0755/1906/6456/files/facial-cleaner-mobile_png.webp?v=1699094684"
               unoptimized
               alt="facial cleaner"
-              className="h-full w-full rounded-b-2xl object-none md:rounded-l-2xl md:rounded-r-none"
+              className="h-full w-full rounded-b-2xl object-cover lg:object-none md:rounded-l-2xl md:rounded-r-none"
               height={320}
               width={343}
             />
@@ -54,7 +54,7 @@ const MobilePresentation: FC<{ routine: ROUTINES; products: Product[] }> = ({
               unoptimized
               src="https://cdn.shopify.com/s/files/1/0755/1906/6456/files/antioxidant-face-gel-mobile_png.webp?v=1699094684"
               alt="antioxidant gace gel booster"
-              className="h-full w-full rounded-b-2xl object-none md:rounded-l-none md:rounded-r-2xl"
+              className="h-full w-full rounded-b-2xl object-cover md:rounded-l-none md:rounded-r-2xl lg:object-none"
               height={320}
               width={343}
             />
@@ -77,7 +77,7 @@ const MobilePresentation: FC<{ routine: ROUTINES; products: Product[] }> = ({
               unoptimized
               src="https://cdn.shopify.com/s/files/1/0755/1906/6456/files/anti-age-face-day-cream-mobile_png.webp?v=1699094685"
               alt="anti age face day cream image"
-              className="h-full w-full rounded-b-2xl object-none md:rounded-l-2xl md:rounded-r-none"
+              className="h-full w-full rounded-b-2xl object-cover md:rounded-l-2xl md:rounded-r-none lg:object-none"
               height={320}
               width={343}
             />
@@ -99,7 +99,7 @@ const MobilePresentation: FC<{ routine: ROUTINES; products: Product[] }> = ({
               unoptimized
               src="https://cdn.shopify.com/s/files/1/0755/1906/6456/files/oil-free-hydrating-face-gel-mobile_png.webp?v=1699094684"
               alt="oil free hydratuing face gel"
-              className="h-full w-full rounded-b-2xl object-none md:rounded-l-none md:rounded-r-2xl"
+              className="h-full w-full rounded-b-2xl object-cover md:rounded-l-none md:rounded-r-2xl lg:object-none"
               height={320}
               width={343}
             />
@@ -136,7 +136,7 @@ const MobilePresentation: FC<{ routine: ROUTINES; products: Product[] }> = ({
             unoptimized
             src="https://cdn.shopify.com/s/files/1/0755/1906/6456/files/anti-age-face-day-cream-mobile_png.webp?v=1699094685"
             alt="facial cleaner"
-            className="h-full w-full rounded-b-2xl object-none md:rounded-l-2xl md:rounded-r-none"
+            className="h-full w-full rounded-b-2xl object-cover md:rounded-l-2xl md:rounded-r-none lg:object-none"
             height={320}
             width={343}
           />
@@ -158,7 +158,7 @@ const MobilePresentation: FC<{ routine: ROUTINES; products: Product[] }> = ({
             unoptimized
             src="https://cdn.shopify.com/s/files/1/0755/1906/6456/files/oil-free-hydrating-face-gel-mobile_png.webp?v=1699094684"
             alt="oil free hydratuing face gel"
-            className="h-full w-full rounded-b-2xl object-none md:rounded-l-none md:rounded-r-2xl"
+            className="h-full w-full rounded-b-2xl object-cover md:rounded-l-none md:rounded-r-2xl lg:object-none"
             height={320}
             width={343}
           />
