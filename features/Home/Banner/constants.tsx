@@ -213,7 +213,7 @@ export const SECONDARY_SLIDES: BannerItemProps[][] = [
 
 export const SLIDER_DESCRIPTIONS = [
   'Softer and fresh skin with 100 % natural origin ingredients',
-  'Protects skin against pollution and radicals',
+  'Anti age formula for youthful and revitalized appearance',
   'Protects skin against pollution and radicals',
   "It's designed to effortlessly clean your face and keep your skin hydrated"
 ];
