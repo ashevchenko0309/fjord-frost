@@ -29,7 +29,7 @@ export const MAIN_SLIDES: Omit<MainSliderItemProps, "index" | "products" | "acti
     ),
     description: <>Long lasting hydration solution</>,
     button: 'Discover',
-    link: '/product/oil-free-hydrating-face-gel'
+    link: '/product/oil-free-hydrating-gel'
   },
   {
     entry: '100 % natural origin ingredients',
@@ -42,7 +42,7 @@ export const MAIN_SLIDES: Omit<MainSliderItemProps, "index" | "products" | "acti
     ),
     description: <>Fine lines appear diminished</>,
     button: 'Discover',
-    link: '/product/anti-age-face-day-cream'
+    link: '/product/anti-age-day-cream'
   },
   {
     entry: 'Hydrating and fresh',
@@ -56,7 +56,7 @@ export const MAIN_SLIDES: Omit<MainSliderItemProps, "index" | "products" | "acti
     ),
     description: <>Nordic glow and 99 % natural origin ingredients</>,
     button: 'Discover',
-    link: '/product/antioxidant-face-gel-booster'
+    link: '/product/antioxidant-ginkgo-gel-booster'
   },
   {
     entry: 'Cleans without clogging pores',
@@ -70,7 +70,7 @@ export const MAIN_SLIDES: Omit<MainSliderItemProps, "index" | "products" | "acti
     ),
     description: <>Mousse texture Removes excess oil</>,
     button: 'Discover',
-    link: '/product/facial-cleanser'
+    link: '/product/purifying-mousse'
   }
 ];
 
