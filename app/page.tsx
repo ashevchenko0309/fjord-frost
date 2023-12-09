@@ -23,12 +23,12 @@ export default async function HomePage() {
   const rawProducts = await getProducts({});
   const products = rawProducts.filter(({ tags }) => !tags.includes(BUNDLED_PRODUCTS_TAG))
   const bundledProduct = rawProducts.filter(({ tags }) => tags.includes(BUNDLED_PRODUCTS_TAG))
-    const fullPack = bundledProduct.filter(({ tags }) => tags.includes(FULL_PACK_BUNDLE_TAG))
-    const simplePack = bundledProduct.filter(({ tags }) => tags.includes(SIMPLE_PACK_BUNDLE_TAG))
+  const fullPack = bundledProduct.filter(({ tags }) => tags.includes(FULL_PACK_BUNDLE_TAG))
+  const simplePack = bundledProduct.filter(({ tags }) => tags.includes(SIMPLE_PACK_BUNDLE_TAG))
 
   return (
     <>
-      <Banner products={products} bundledProduct={bundledProduct} />
+      <Banner products={products} bundledProduct={fullPack} />
       <About />
       <Futures />
       <Products products={products} />
