@@ -42,7 +42,7 @@ export const MAIN_SLIDES: Omit<MainSliderItemProps, "index" | "products" | "acti
     ),
     description: <>Fine lines appear diminished</>,
     button: 'Discover',
-    link: '/product/anti-age-day-cream'
+    link: '/product/anti-age-day-cream-1'
   },
   {
     entry: 'Hydrating and fresh',
@@ -81,14 +81,14 @@ export const SECONDARY_SLIDES: BannerItemProps[][] = [
       alt: 'only men banner image',
       priority: true,
       title: 'Men only',
-      link: '/product/anti-age-day-cream'
+      link: '/product/anti-age-day-cream-1'
     },
     {
       src: "https://cdn.shopify.com/s/files/1/0755/1906/6456/files/anti-age-complex_png.webp?v=1699093898",
       alt: 'anti age complex image',
       priority: true,
       title: 'Anti-age complex',
-      link: '/product/anti-age-day-cream'
+      link: '/product/anti-age-day-cream-1'
     },
     {
       src: "https://cdn.shopify.com/s/files/1/0755/1906/6456/files/hydrading-formula_png.webp?v=1699093898",
@@ -136,25 +136,25 @@ export const SECONDARY_SLIDES: BannerItemProps[][] = [
         src: "https://cdn.shopify.com/s/files/1/0755/1906/6456/files/anti-age-face-day-cream_png.webp?v=1699093898",
         alt: 'anti age face day cream product',
         priority: true,
-        link: '/product/anti-age-day-cream'
+        link: '/product/anti-age-day-cream-1'
       },
       {
         src: "https://cdn.shopify.com/s/files/1/0755/1906/6456/files/man-with-earing-looking-in-camera_png.webp?v=1699093897",
         alt: 'man with earring looking in camera',
         priority: true,
-        link: '/product/anti-age-day-cream'
+        link: '/product/anti-age-day-cream-1'
       },
       {
         src: "https://cdn.shopify.com/s/files/1/0755/1906/6456/files/anti-age-face-day-cream-on-tree_png.webp?v=1699093897",
         alt: 'anti age face day cream on tree product',
         priority: true,
-        link: '/product/anti-age-day-cream'
+        link: '/product/anti-age-day-cream-1'
       },
       {
         src: "https://cdn.shopify.com/s/files/1/0755/1906/6456/files/anti-age-face-day-cream-on-grass_png.webp?v=1699093898",
         alt: 'anti age face day cream on grass product',
         priority: true,
-        link: '/product/anti-age-day-cream'
+        link: '/product/anti-age-day-cream-1'
       }
     ],
   [

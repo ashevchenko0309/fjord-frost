@@ -36,7 +36,7 @@ const DesktopPresentation = () => {
           </div>
         </div>
       </Link>
-      <Link href="/product/anti-age-day-cream">
+      <Link href="/product/anti-age-day-cream-1">
         <div className="group relative overflow-hidden">
           <Image src="https://cdn.shopify.com/s/files/1/0755/1906/6456/files/anti-age-face-day-cream_png_b71377bf-1485-42a3-8af9-3327cc29abb1.webp?v=1699100907" width={258} height={429} alt="Anti-age face day cream" />
           <div className="absolute left-0 top-0 h-full w-full bg-gradient-to-t from-black to-60% duration-300 group-hover:translate-y-1/2" />

@@ -70,7 +70,7 @@ const MobilePresentation = () => {
         </SwiperSlide>
         <SwiperSlide>
           <div className="pb-8">
-            <Link href="/product/anti-age-day-cream">
+            <Link href="/product/anti-age-day-cream-1">
               <div className="relative mb-4">
                 <Image
                   src="https://cdn.shopify.com/s/files/1/0755/1906/6456/files/anti-age-face-day-cream_png_b71377bf-1485-42a3-8af9-3327cc29abb1.webp?v=1699100907"
@@ -85,7 +85,7 @@ const MobilePresentation = () => {
                 </p>
               </div>
             </Link>
-            <Link href="/product/anti-age-day-cream">
+            <Link href="/product/anti-age-day-cream-1">
               <OutlineButton text="Discover" className="mx-auto" />
             </Link>
           </div>
