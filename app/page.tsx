@@ -3,7 +3,7 @@ import Futures from '../features/Home/Futures';
 import Products from '../features/Home/Products';
 import CallToAction from '../features/Home/CallToAction';
 import Steps from '../features/Home/Steps';
-import Reviews from '../features/Home/Reviews';
+// import Reviews from '../features/Home/Reviews';
 import Banner from '../features/Home/Banner';
 import { getProducts } from '../lib/shopify';
 import {BUNDLED_PRODUCTS_TAG, FULL_PACK_BUNDLE_TAG, SIMPLE_PACK_BUNDLE_TAG} from "../constants/products";
