@@ -34,7 +34,7 @@ export default async function HomePage() {
       <Products products={products} />
       <CallToAction />
       <Steps products={products} fullPack={fullPack} simplePack={simplePack} />
-      <Reviews />
+      {/*<Reviews />*/}
     </>
   );
 }
